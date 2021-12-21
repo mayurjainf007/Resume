@@ -1,0 +1,249 @@
+/*demo panel*/
+
+.theme_panel {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    z-index: 9999;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.theme_panel.active {
+    right: 0;
+}
+
+.theme_panel.active .toggle_bts a.sett .ion:before {
+    content: '\f12a';
+}
+
+.theme_panel .buy-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 15px 0 0 0;
+    padding: 0 15px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #f9f9f9;
+    background: green;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 3;
+}
+
+.theme_panel .buy-btn.wp_btn {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    display: block;
+    width: auto;
+}
+
+.theme_panel .buy-btn .ion {
+    margin: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fefefe;
+}
+
+.theme_menu {
+    padding: 0 10px 60px 10px;
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+}
+
+@media (max-width: 680px) {
+    .theme_panel {
+        right: -230px;
+        width: 230px;
+    }
+    .theme_panel.active {
+        right: 0;
+    }
+}
+
+.toggle_bts {
+    padding: 0;
+    position: absolute;
+    top: 120px;
+    left: -50px;
+    height: 50px;
+    line-height: 50px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.toggle_bts a {
+    margin-bottom: 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    text-align: center;
+    box-shadow: -4px 7px 10px rgba(0,0,0,0.1);
+    border-radius: 4px 0 0 4px;
+}
+
+.toggle_bts a .ion {
+    font-size: 20px;
+    line-height: 50px;
+    color: #222;
+}
+
+.toggle_bts a.sett .ion {
+    animation-name: settings;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.toggle_bts a.buy-this-template {
+    color: #fff;
+    background: green;
+}
+
+.main_demo img {
+    max-width: 100%;
+}
+
+.main_demo h6 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.main_demo {
+    margin: -10px -5px 0 -5px;
+}
+
+.main_demo .d_col {
+    padding: 10px 5px 0 5px;
+    float: left;
+    width: 50%;
+}
+
+.theme_menu .wp_vers_bl {
+    margin: 0 -10px;
+    padding-bottom: 10px;
+    background: #f0f0f0;
+}
+
+.theme_menu .wp_vers_bl h4 {
+    margin: 0;
+    padding: 30px 0 15px 0;
+    background: none;
+}
+
+.theme_menu h4 {
+    margin: 30px 0 15px 0;
+    padding: 0 5px;
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    color: #222;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.theme_menu .segment {
+    padding: 0 12px;
+    margin-bottom: 0;
+}
+
+.theme_menu ul.theme {
+    margin: -10px -5px 0 -5px;
+    font-size: 0;
+}
+
+.theme_menu ul.theme li a:hover, .theme_menu ul.theme li a.active {
+    background: #f9f9f9;
+}
+
+.theme_menu ul.theme li {
+    margin: 10px 2px;
+    display: inline-block;
+    list-style: none;
+}
+
+.theme.layout_style li a {
+    height: 26px;
+    width: 28px;
+    position: relative;
+}
+
+.theme.layout_style li a.active {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.theme_menu ul.theme li a {
+    display: block;
+}
+
+.theme_menu .theme.demo_list {
+    margin: 5px -1px 0 0;
+}
+
+.theme_menu .theme.demo_list li {
+    margin: -1px 0 0 0;
+    float: left;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.theme_menu .theme.demo_list li:first-child {
+    border-left: 1px solid #eee;
+}
+
+.theme_menu .theme.demo_list li strong {
+    font-weight: 500;
+    color: #444;
+}
+
+@-webkit-keyframes settings {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+    
+    100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes settings {
+	0% {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+    
+	100% {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}
+}
