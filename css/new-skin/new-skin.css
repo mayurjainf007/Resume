@@ -243,7 +243,7 @@ strong {
 }
 
 .row .col {
-	padding: 30px;
+	padding: 20px;
 	font-size: 16px;
 }
 
@@ -973,7 +973,7 @@ input[type="file"] {
 	padding: 11px 30px;
 	display: inline-block;
 	vertical-align: top;
-	width: 50%;
+	width: 100%;
 }
 
 .info-list ul li:first-child {

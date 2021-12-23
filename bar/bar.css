@@ -23,11 +23,7 @@
 }
 
 .theme_panel.light{
-    background: #fff;
-}
-
-.theme_panel.green {
-    background: #000
+    background: #000;
 }
 
 .theme_panel a .ion {
@@ -44,10 +40,6 @@
 }
 
 .theme_panel.light a .ion {
-    color: #10ff00;
-}
-
-.theme_panel.green a .ion {
     color: #fff;
 }
 
