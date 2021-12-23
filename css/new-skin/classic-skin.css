@@ -29,7 +29,7 @@
 	padding: 0 0 5px 0;
 	display: inline-block;
 	vertical-align: top;
-	width: 50%;
+	width: 100%;
 	text-align: left;
 }
 
@@ -49,7 +49,7 @@
 
 .info-list ul li strong:after {
 	position: relative;
-	content: ' > ';
+	content: '>';
 	background: #fff;
 	display: inline;
 	margin-left: -3px;
