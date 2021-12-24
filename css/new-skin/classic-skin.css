@@ -1,9 +1,10 @@
 /**
-*	Ryan - Resume/CV/vCard Template (HTML)
-*	Version: 2.5
-*	Author: beshleyua
-*	Author URL: http://themeforest.net/user/beshleyua
-*	Copyright Â© Cvio by beshleyua. All Rights Reserved.
+*
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+*
 **/
 
 .content.about .row .col.col-d-6 {
@@ -49,7 +50,7 @@
 
 .info-list ul li strong:after {
 	position: relative;
-	content: '>';
+	content: ' : ';
 	background: #fff;
 	display: inline;
 	margin-left: -3px;

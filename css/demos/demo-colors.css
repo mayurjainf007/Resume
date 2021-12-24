@@ -85,12 +85,19 @@
 	.card-started .profile .social a .ion, 
 	.card-started .profile .social a .fab, 
 	.card-started .profile .social a .fas, 
-	.card-started .profile .social a .fa, 
 	.content-sidebar .profile .social a .ion, 
 	.content-sidebar .profile .social a .fab, 
 	.content-sidebar .profile .social a .fas, 
 	.content-sidebar .profile .social a .fa {
 		color: #fff;
+	}
+
+	.card-started .profile .social.dark a .fa{
+		color: #fff;
+	}
+
+	.card-started .profile .social.light a .fa{
+		color: #000;
 	}
 
 	.lnk:hover,
