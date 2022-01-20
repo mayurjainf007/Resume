@@ -121,11 +121,15 @@ $(function () {
 		var d_lnk = $('.lnks .lnk.discover');
 
 		if((width >= 1024)) {
-			
-			/* if desktop */
-			if(!menu_item.hasClass('active') & (width > 1023) & $('#home-card').length) {
+			if($(card_item).hasClass('active')){
+				menu_item.removeClass('active');
+				container.find(card_item).addClass('animated '+animation_out);
+				container.find(card_item).removeClass(animation_in);
+				$(card_item).removeClass('active');
+				$(card_item).addClass('hidden');
 
-				/* close card items */
+			}
+			else{		
 				menu_items.removeClass('active');
 				container.find(card_items).removeClass('animated '+animation_in);
 
@@ -133,17 +137,22 @@ $(function () {
 					container.find(card_items).addClass('animated '+animation_out);
 				}
 
-				/* open card item */
 				menu_item.addClass('active');
 				container.addClass('opened');
+
 				container.find(card_item).removeClass('animated '+animation_out);
 				container.find(card_item).addClass('animated '+animation_in);
 				
 				$(card_items).addClass('hidden');
-				
+				$(card_items).removeClass('active');
+
 				$(card_item).removeClass('hidden');
 				$(card_item).addClass('active');
 			}
+			// if(!$(card_item).hasClass('hidden')) {
+			// 	$(card_item).addClass('hidden');
+			// 	container.find(card_item).addClass('animated '+animation_out);
+			// }	 
 		}
 		/* if mobile */
 		if((width < 1024) & $('#home-card').length) {
@@ -575,14 +584,3 @@ function initMap() {
 		title: 'We are here!'
 	});
 }
-
-( function( $ ) {
-	'use strict';
-	
-	// load html
-	$.get("https://bslthemes.site/html/ryan/bar/bar.html", function (data) {
-        $('body').append(data);
- 		console.log(data);
-    });
-	
-} )( jQuery );

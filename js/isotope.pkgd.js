@@ -1,20 +1,7 @@
-/*!
- * Isotope PACKAGED v3.0.6
- *
- * Licensed GPLv3 for open source use
- * or Isotope Commercial License for commercial use
- *
- * https://isotope.metafizzy.co
- * Copyright 2010-2018 Metafizzy
- */
+/*
 
-/**
- * Bridget makes jQuery widgets
- * v2.0.1
- * MIT license
- */
 
-/* jshint browser: true, strict: true, undef: true, unused: true */
+ */
 
 ( function( window, factory ) {
   // universal module definition
@@ -344,16 +331,14 @@ function getZeroSize() {
 
 // -------------------------- getStyle -------------------------- //
 
-/**
- * getStyle, get style of element, check for Firefox bug
- * https://bugzilla.mozilla.org/show_bug.cgi?id=548397
- */
+/*
+
+*/
 function getStyle( elem ) {
   var style = getComputedStyle( elem );
   if ( !style ) {
     logError( 'Style returned ' + style +
-      '. Are you running this code in a hidden iframe on Firefox? ' +
-      'See https://bit.ly/getsizebug1' );
+      '. Are you running this code in a hidden iframe on Firefox? ' );
   }
   return style;
 }
@@ -2500,13 +2485,9 @@ return Item;
 
 }));
 
-/*!
- * Masonry v4.2.1
- * Cascading grid layout library
- * https://masonry.desandro.com
- * MIT License
- * by David DeSandro
- */
+/*
+
+*/
 
 ( function( window, factory ) {
   // universal module definition
@@ -2740,11 +2721,9 @@ return Item;
 
 }));
 
-/*!
- * Masonry layout mode
- * sub-classes Masonry
- * https://masonry.desandro.com
- */
+/*
+
+*/
 
 ( function( window, factory ) {
   // universal module definition
@@ -2939,15 +2918,7 @@ return Vertical;
 
 }));
 
-/*!
- * Isotope v3.0.6
- *
- * Licensed GPLv3 for open source use
- * or Isotope Commercial License for commercial use
- *
- * https://isotope.metafizzy.co
- * Copyright 2010-2018 Metafizzy
- */
+/**/
 
 ( function( window, factory ) {
   // universal module definition

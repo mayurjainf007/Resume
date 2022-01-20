@@ -193,6 +193,7 @@ textarea:focus:-ms-input-placeholder {
 
 .info-list ul li strong {
 	color: rgba(255, 255, 255, 0.85);
+	background: transparent;
 }
 
 .service-items.border-line-v:after {

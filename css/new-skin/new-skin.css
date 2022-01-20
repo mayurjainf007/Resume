@@ -1017,7 +1017,7 @@ input[type="file"] {
 	float: left;
 	margin-right: 8px;
 	padding: 1px 8px;
-	background: #78cc6d;
+	background: transparent;
 	font-size: 14px;
 	line-height: 20px;
 	color: #fefefe;

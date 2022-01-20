@@ -284,7 +284,7 @@ var elementNodeTypes = {
 ImagesLoaded.prototype.addElementBackgroundImages = function( elem ) {
   var style = getComputedStyle( elem );
   if ( !style ) {
-    // Firefox returns null if in a hidden iframe https://bugzil.la/548397
+    // Firefox returns null if in a hidden iframe
     return;
   }
   // get url inside url("...")

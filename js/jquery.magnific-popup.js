@@ -458,7 +458,6 @@ MagnificPopup.prototype = {
 	updateSize: function(winHeight) {
 
 		if(mfp.isIOS) {
-			// fixes iOS nav bars https://github.com/dimsemenov/Magnific-Popup/issues/2
 			var zoomLevel = document.documentElement.clientWidth / window.innerWidth;
 			var height = window.innerHeight * zoomLevel;
 			mfp.wrap.css('height', height);
@@ -466,7 +465,6 @@ MagnificPopup.prototype = {
 		} else {
 			mfp.wH = winHeight || _window.height();
 		}
-		// Fixes #84: popup incorrectly positioned with position:relative on body
 		if(!mfp.fixedContentPos) {
 			mfp.wrap.css('height', mfp.wH);
 		}
