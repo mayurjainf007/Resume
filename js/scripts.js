@@ -265,6 +265,21 @@ $(function () {
 		$('.filter-button-group .f_btn').removeClass('active');
 		$(this).addClass('active');
 	});
+	
+		
+	// Handle experience filter
+    $("input[name='fl_radio']").change(function () {
+        var selectedValue = $(this).val();
+        
+        // Hide all grid items within the works-card section
+        $("#works-card .grid-item").hide();
+        
+        // Show the selected grid item
+        $("#works-card ." + selectedValue).fadeIn(); // Smooth transition
+    });
+
+    // Initialize by showing the active radio button's content
+    $("input[name='fl_radio']:checked").trigger("change");
 
 	
 	/*
@@ -541,6 +556,41 @@ $(function () {
 		}
 	});
 
+});
+
+$(document).on('click', '.pager .page-numbers', function (e) {
+    e.preventDefault();
+
+    const $this = $(this);
+    const container = $('#blog-container');
+    let currentPage = parseInt(container.data('current-page'), 10);
+    const totalPages = parseInt(container.data('total-pages'), 10);
+
+    if ($this.hasClass('prev') && currentPage > 1) {
+        currentPage--;
+    } else if ($this.hasClass('next') && currentPage < totalPages) {
+        currentPage++;
+    }
+
+    // Update the current page
+    container.data('current-page', currentPage);
+
+    // Show the corresponding blog page
+    $('.blog-page').hide();
+    $(`.blog-page[data-page="${currentPage}"]`).fadeIn();
+
+    // Update button states
+    if (currentPage === 1) {
+        $('.pager .prev').addClass('disabled');
+    } else {
+        $('.pager .prev').removeClass('disabled');
+    }
+
+    if (currentPage === totalPages) {
+        $('.pager .next').addClass('disabled');
+    } else {
+        $('.pager .next').removeClass('disabled');
+    }
 });
 
 
