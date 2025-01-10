@@ -814,7 +814,7 @@ input[type="file"] {
 
 .card-inner:before,
 .card-inner:after {
-	height: 30px;
+	height: 10px;
 }
 
 .card-inner .card-wrap {
