@@ -438,12 +438,8 @@ strong {
 
 /* links, buttons */
 .lnks {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 70px;
-	z-index: 10;
+	position: relative;
+    top: 20px;
 }
 
 .lnks:before {
