@@ -244,7 +244,7 @@ strong {
 }
 
 .row .col {
-	padding: 30px;
+	padding: 20px;
 	font-size: 16px;
 }
 
@@ -742,23 +742,6 @@ input[type="file"] {
 
 .card-started .profile.no-photo .slide {
 	height: 57%;
-}
-
-.card-started .profile .slide:before,
-.card-started .profile .slide:after {
-	left: -25%;
-	bottom: -63%;
-	width: 100%;
-	height: 70%;
-}
-
-.card-started .profile .slide:after {
-	left: auto;
-	right: -25%;
-	transform: rotate(-8deg);
-	-webkit-transform: rotate(-8deg);
-	-moz-transform: rotate(-8deg);
-	-o-transform: rotate(-8deg);
 }
 
 .card-started .profile .image {

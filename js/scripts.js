@@ -594,6 +594,38 @@ $(document).on('click', '.pager .page-numbers', function (e) {
 });
 
 
+// Smooth Transition
+$(document).ready(function() {
+    // Initially show only the home card and the sidebar
+    $('#main-card').hide();
+    $('.top-menu').hide();
+
+    // On clicking the image, hide the home card and sidebar, show the main card
+    $('#home-card .image a').on('click', function(e) {
+        e.preventDefault();
+
+        // Hide sidebar and transition to the main card
+        $('#home-card').fadeOut(500, function() {
+            $('#main-card').fadeIn(500);
+			$('.top-menu').fadeIn(500);
+        });
+    });
+
+    // Optional: Clicking the profile image on the main card returns to the home card
+    $('#main-card .image').on('click', function(e) {
+        e.preventDefault();
+
+        // Show sidebar and transition back to the home card
+		$('.top-menu').fadeOut(300);
+        $('#main-card').fadeOut(500, function() {
+            $('#home-card').fadeIn(500);
+        });
+    });
+});
+
+
+
+
 /*
 	Google Map Options
 */

@@ -34,9 +34,9 @@ h6 {
 }
 
 .lnks:before {
-	background: -moz-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+	/*background: -moz-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
 	background: -webkit-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-	background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+	background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);*/
 }
 
 .lnk,
@@ -146,7 +146,7 @@ textarea:focus:-ms-input-placeholder {
 /* Profile Card */
 .profile-card {
     text-align: center;
-    background: #31313a; /* Matches dark theme */
+	background: #31313a; /* Matches dark theme */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -211,10 +211,10 @@ textarea:focus:-ms-input-placeholder {
 }
 
 
-
 .card-started:after {
 	background: #31313a;
 	opacity: 0.3;
+	border-radius: 15px;f
 }
 
 .card-started .profile {
