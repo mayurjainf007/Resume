@@ -421,51 +421,11 @@
 	-khtml-border-radius: 4px 4px 0 0;
 }
 
-.card-started .profile .slide:before,
-.card-started .profile .slide:after {
-	content: '';
-	position: absolute;
-	left: -25%;
-	bottom: -198px;
-	width: 700px;
-	height: 200px;
-	background: #ffffff;
-	transform: rotate(12deg);
-	-webkit-transform: rotate(12deg);
-	-moz-transform: rotate(12deg);
-	-o-transform: rotate(12deg);
-}
-
-.card-started .profile .slide:after {
-	left: auto;
-	right: -25%;
-	transform: rotate(-6deg);
-	-webkit-transform: rotate(-6deg);
-	-moz-transform: rotate(-6deg);
-	-o-transform: rotate(-6deg);
-}
-
 .card-started .profile .image {
 	margin: 0 0 20px 0;
 	position: relative;
 	display: inline-block;
 	width: 140px;
-}
-
-.card-started .profile .image:before {
-	content: '';
-	position: absolute;
-	top: 10px;
-	left: -10px;
-	width: 100%;
-	height: 100%;
-	background: -moz-linear-gradient(-45deg, rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);
-	background: -webkit-linear-gradient(-45deg, rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);
-	background: linear-gradient(135deg, rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);
-	border-radius: 100%;
-	-moz-border-radius: 100%;
-	-webkit-border-radius: 100%;
-	-khtml-border-radius: 100%;
 }
 
 .card-started .profile .image img {
