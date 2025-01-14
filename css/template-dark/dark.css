@@ -214,6 +214,7 @@ textarea:focus:-ms-input-placeholder {
 .card-started:after {
 	background: #31313a;
 	opacity: 0.3;
+	border-radius: 15px;f
 }
 
 .card-started .profile {
