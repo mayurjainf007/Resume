@@ -3257,3 +3257,7 @@ p.no-comments {
 .typed-cursor {
     display: none!important;
 }
+
+.profile-card .image img {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}

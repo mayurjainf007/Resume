@@ -3484,3 +3484,96 @@
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.slideInRight {
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.slideOutLeft {
+    animation: slideOutLeft 0.6s ease forwards;
+}
+
+.slideInLeft {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide image and title to the main card */
+@keyframes slideToMain {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+.slide-to-main {
+    animation: slideToMain 0.6s ease forwards;
+}
+
+/* Slide image and title back to home card */
+@keyframes slideBack {
+    0% {
+        transform: translateY(-150px) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.slide-back {
+    animation: slideBack 0.6s ease forwards;
+}
+
+/* Clone image for smooth sliding */
+.slide-clone {
+    position: absolute;
+    z-index: 9999;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Clone title for smooth sliding */
+.slide-clone-title {
+    position: absolute;
+    z-index: 9999;
+    font-weight: bold;
+    color: #fff;
+}
