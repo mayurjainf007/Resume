@@ -595,33 +595,56 @@ $(document).on('click', '.pager .page-numbers', function (e) {
 
 
 // Smooth Transition
-$(document).ready(function() {
-    // Initially show only the home card and the sidebar
+
+$(document).ready(function () {
+    // Initially hide the main card and sidebar
     $('#main-card').hide();
     $('.top-menu').hide();
 
-    // On clicking the image, hide the home card and sidebar, show the main card
+$(document).ready(function() {
+    // Initially show only the home card and hide sidebar
+    $('#main-card').hide();
+    $('.top-menu').hide();
+
+    // Home to Main Card (Slide-in effect)
     $('#home-card .image a').on('click', function(e) {
         e.preventDefault();
 
-        // Hide sidebar and transition to the main card
+        // Hide home card with slide-out and show main card with slide-in
         $('#home-card').fadeOut(500, function() {
-            $('#main-card').fadeIn(500);
-			$('.top-menu').fadeIn(500);
+            $('#main-card').removeClass('animated slideOutLeft').fadeIn(500).addClass('animated slideInRight');
+            
+            // Show the sidebar
+            $('.top-menu').fadeIn(500, function() {
+                // Trigger the about-card after the main-card appears
+                $('.top-menu a[href="#about-card"]').trigger('click');
+            });
         });
     });
 
-    // Optional: Clicking the profile image on the main card returns to the home card
+    // Main to Home Card (Deactivate, Fade-out Header, Slide-out)
     $('#main-card .image').on('click', function(e) {
         e.preventDefault();
 
-        // Show sidebar and transition back to the home card
-		$('.top-menu').fadeOut(300);
-        $('#main-card').fadeOut(500, function() {
-            $('#home-card').fadeIn(500);
+        // Deactivate other active cards
+        $('.card-inner').removeClass('active animated fadeInLeft').addClass('hidden');
+        $('.top-menu li').removeClass('active');
+
+        // Fade out sidebar and slide out the main card
+        $('.top-menu').fadeOut(300, function() {
+            $('#main-card').removeClass('animated slideInRight').addClass('animated slideOutLeft');
+
+            setTimeout(function() {
+                $('#main-card').fadeOut(300, function() {
+                    $('#home-card').fadeIn(500).addClass('animated slideInLeft');
+                });
+            }, 500); // Matches animation duration
         });
     });
 });
+});
+
+
 
 
 
