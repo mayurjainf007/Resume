@@ -1,4 +1,11 @@
 /* 1. Template Dark */
+
+* {
+	box-sizing: border-box;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+	-webkit-box-sizing: border-box;
+}
+
 body {
 	color: rgba(255, 255, 255, 0.55);
 	background: #26262d;
@@ -144,10 +151,18 @@ textarea:focus:-ms-input-placeholder {
 }
 
 /* Profile Card */
+
+#main-card .title {
+    color: #FFFFFF;   /* Bright color for contrast */
+}
+
+.homecard-started{
+    padding: 20px;
+}
+
 .profile-card {
     text-align: center;
 	background: #31313a; /* Matches dark theme */
-    padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     width: 90%;
@@ -214,8 +229,9 @@ textarea:focus:-ms-input-placeholder {
 .card-started:after {
 	background: #31313a;
 	opacity: 0.3;
-	border-radius: 15px;f
+	border-radius: 15px;
 }
+
 
 .card-started .profile {
 	background: #31313a;
@@ -235,10 +251,21 @@ textarea:focus:-ms-input-placeholder {
 	color: rgba(255, 255, 255, 0.85);
 }
 
+.card-started .profile .subtitle, .card-started .profile .typed-cursor {
+    position: relative;
+    margin: 0;
+	color: #78cc6d;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: 700;
+}
+
 .card-started .profile .social a .ion,
 .card-started .profile .social a .fab,
 .card-started .profile .social a .fas {
-	color: rgba(255, 255, 255, 0.55);
+	color: #fff;
 }
 
 .card-inner {

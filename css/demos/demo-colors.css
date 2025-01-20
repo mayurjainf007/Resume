@@ -89,7 +89,7 @@
 	.content-sidebar .profile .social a .fab, 
 	.content-sidebar .profile .social a .fas, 
 	.content-sidebar .profile .social a .fa {
-		color: #fff;
+		color: #000;
 	}
 
 	.card-started .profile .social.dark a .fa{
@@ -98,94 +98,6 @@
 
 	.card-started .profile .social.light a .fa{
 		color: #000;
-	}
-
-	.lnk:hover,
-	.button:hover,
-	.lnk:hover .ion,
-	.button:hover .ion,
-	a,
-	a:hover,
-	input:focus, 
-	textarea:focus,
-	.header .top-menu ul li:hover a,
-	.header .top-menu ul li.active a,
-	.header .top-menu ul li.current-menu-item a,
-	.header .top-menu ul li:hover a .icon,
-	.header .top-menu ul li.active a .icon,
-	.header .top-menu ul li:hover a .link,
-	.header .top-menu ul li.active a .link,
-	.header .top-menu ul li.current-menu-item a .icon,
-	.header .top-menu ul li.current-menu-item a .link,
-	.header .profile .subtitle,
-	.card-started .profile .subtitle,
-	.content-sidebar .profile .subtitle,
-	.card-started .profile .social a:hover .ion, 
-	.card-started .profile .social a:hover .fab, 
-	.card-started .profile .social a:hover .fas,
-	.content-sidebar .profile .social a:hover .ion, 
-	.content-sidebar .profile .social a:hover .fab, 
-	.content-sidebar .profile .social a:hover .fas,
-	.pricing-items .pricing-item .icon,
-	.fuct-items .fuct-item .icon,
-	.resume-title .icon,
-	.skill-title .icon,
-	.resume-items .resume-item.active .date,
-	.content.works .filter-menu .f_btn.active,
-	.box-item:hover .desc .name,
-	.single-post-text p a, 
-	.comment-text p a,
-	.post-text-bottom span.cat-links a,
-	.post-text-bottom .tags-links a, 
-	.post-text-bottom .tags-links span,
-	.page-numbers.current, 
-	.page-links a,
-	.post-comments .post-comment .desc .name,
-	.post-comments .post-comment .desc span.comment-reply a:hover,
-	.content-sidebar .main-menu ul li.current_page_item > a, 
-	.content-sidebar .main-menu ul li:hover > a,
-	.content-sidebar .main-menu ul li.current_page_parent > a,
-	.content-sidebar .main-menu ul li.current_page_ancestor > a,
-	.content-sidebar .widget ul li a:hover,
-	.content-sidebar .tagcloud a,
-	.card-started .profile .subtitle, 
-	.content-sidebar .profile .subtitle, 
-	.content-sidebar .profile .typed-cursor, 
-	.card-started .profile .typed-cursor,
-	.content .title .first-word,
-	.content .title::first-letter,
-	.content .title .first-letter::first-letter,
-	.content-sidebar h2.widget-title .first-word,
-	.content-sidebar h2.widget-title::first-letter,
-	.content-sidebar h2.widget-title .first-letter::first-letter,
-	.box-item .date,
-	.profile .main-menu ul li.current-menu-item a,
-	.profile .main-menu ul li.current_page_item > a,
-	.profile .main-menu ul li:hover > a,
-	.profile .main-menu ul li.current_page_parent > a,
-	.profile .main-menu ul li.current_page_ancestor > a,
-	.custom-header nav span:before,
-	.fc-calendar .fc-row > div.fc-content:hover:after,
-	.skills-list.list ul li .name:before,
-	.preloader .spinner.recursive-circle,
-	.woocommerce nav.woocommerce-pagination ul li a:focus, 
-	.woocommerce nav.woocommerce-pagination ul li a:hover, 
-	.woocommerce nav.woocommerce-pagination ul li span.current,
-	.woocommerce .star-rating,
-	strong.woocommerce-review__author,
-	.woocommerce-message::before,
-	.single-post-text p a,
-	.comment-text p a,
-	.blog-content p a,
-	.card-started .profile .social a:hover .ion, 
-	.card-started .profile .social a:hover .fab, 
-	.card-started .profile .social a:hover .fas, 
-	.card-started .profile .social a:hover .fa, 
-	.content-sidebar .profile .social a:hover .ion, 
-	.content-sidebar .profile .social a:hover .fab, 
-	.content-sidebar .profile .social a:hover .fas, 
-	.content-sidebar .profile .social a:hover .fa {
-		color: #78cc6d;
 	}
 
 	.content .title .first-word,
@@ -208,7 +120,8 @@ gradient(135deg, rgba(120, 204, 109, 0.15) 0%, rgba(120, 204, 109, 0.01)
 rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);
 background: -webkit-linear-gradient(-45deg, rgba(120, 204, 109, 0.4) 0%,
 rgba(120, 204, 109, 0.01) 100%);         background: linear-gradient(135deg,
-rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);     }
+rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);
+border-radius: 15px;     }
 
     .box-item .image .info:before {         background: -moz-linear-
 gradient(-45deg, rgba(120, 204, 109, 0.5) 0%, rgba(120, 204, 109, 0.01) 100%);

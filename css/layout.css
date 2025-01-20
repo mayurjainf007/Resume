@@ -410,15 +410,13 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 300px;
+	height: 100%;
+	opacity: 0.2;
 	background-color: #626262;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	border-radius: 4px 4px 0 0;
-	-moz-border-radius: 4px 4px 0 0;
-	-webkit-border-radius: 4px 4px 0 0;
-	-khtml-border-radius: 4px 4px 0 0;
+	border-radius: 15px;
 }
 
 .card-started .profile .image {
@@ -3260,4 +3258,82 @@ p.no-comments {
 
 .profile-card .image img {
     transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+/* Enhancing the title in the main card */
+#main-card .title {
+    font-size: 36px;  /* Increased font size */
+    font-weight: 700; /* Bolder font */
+    color: #000;   /* Bright color for contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adding shadow for depth */
+}
+
+/* Profile Card */
+
+.homecard-started{
+    padding: 20px;
+}
+
+.profile-card {
+    text-align: center;
+	background: #000; /* Matches dark theme */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 485px;
+    margin: 0 auto;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #ffffff;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-card img:hover {
+    transform: scale(1.1);
+}
+
+.profile-card h1 {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+}
+
+.profile-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 15px;
+}
+
+.profile-card .social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-card .social-links a:hover {
+    transform: scale(1.2);
+    color: #78cc6d;
+}
+
+.profile-card .download-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(45deg, #78cc6d, #4CAF50);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card .download-btn:hover {
+    background: linear-gradient(45deg, #4CAF50, #78cc6d);
+    transform: translateY(-3px);
 }
