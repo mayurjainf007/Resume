@@ -1,6 +1,5 @@
 /*
-*   Author: beshleyua
-*   Author URL: http://themeforest.net/user/beshleyua
+*   Author: mayur jain
 */
 
 
@@ -18,14 +17,8 @@ $(window).on("load", function() {
 $(function () {
 	'use strict';
 	
-	
-	/*
-		Vars
-	*/
-	
 	var width = $(window).width();
 	var height = $(window).height();
-
 
 	/*
 		Typed
@@ -555,6 +548,27 @@ $(function () {
 			$(this).html('<div class="first-letter">'+ $(this).html() + '</div>');
 		}
 	});
+	const ctx = document.getElementById('skillsChart').getContext('2d');
+	const skillsChart = new Chart(ctx, {
+		type: 'bar',
+        data: {
+			labels: ['Python', 'SQL', 'TensorFlow', 'PyTorch', 'AWS'],
+			datasets: [{
+				label: 'Proficiency (%)',
+				data: [90, 85, 80, 75, 70],
+				backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
 
 });
 
@@ -595,11 +609,6 @@ $(document).on('click', '.pager .page-numbers', function (e) {
 
 
 // Smooth Transition
-
-$(document).ready(function () {
-    // Initially hide the main card and sidebar
-    $('#main-card').hide();
-    $('.top-menu').hide();
 
 $(document).ready(function() {
     // Initially show only the home card and hide sidebar
@@ -642,11 +651,6 @@ $(document).ready(function() {
         });
     });
 });
-});
-
-
-
-
 
 
 /*
@@ -689,3 +693,23 @@ function initMap() {
 		title: 'We are here!'
 	});
 }
+
+function sendMessage() {
+                    const userInput = document.getElementById('chat-input').value;
+                    fetch('https://api.openai.com/v1/completions', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer YOUR_OPENAI_API_KEY'
+                        },
+                        body: JSON.stringify({
+                            model: 'text-davinci-003',
+                            prompt: userInput,
+                            max_tokens: 100
+                        })
+                    }).then(response => response.json()).then(data => {
+                        document.getElementById('chat-response').innerText = data.choices[0].text;
+                    }).catch(error => {
+                        document.getElementById('chat-response').innerText = 'Error: Unable to fetch response.';
+                    });
+                }

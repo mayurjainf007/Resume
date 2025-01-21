@@ -580,6 +580,7 @@ ul {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-left: 0px;
+	font-size: 16px;
 }
 
 ul ul,
@@ -591,6 +592,7 @@ ol ul {
 
 li {
 	margin-bottom: 0px;
+	font-size: 16px;
 }
 
 /* code */
@@ -1007,3 +1009,10 @@ textarea.error::-webkit-input-placeholder {
 
 }
 
+#face-detection-demo, #chatbot {
+    margin-top: 20px;
+}
+canvas {
+	margin: 20px auto;
+    display: block;
+}
