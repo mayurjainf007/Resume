@@ -1009,3 +1009,10 @@ textarea.error::-webkit-input-placeholder {
 
 }
 
+#face-detection-demo, #chatbot {
+    margin-top: 20px;
+}
+canvas {
+	margin: 20px auto;
+    display: block;
+}
