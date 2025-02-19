@@ -304,7 +304,8 @@
 			<div class="card-inner" id="project-card">
 				<div class="card-wrap">
 					<div class="content blog">
-						<div class="row border-line-v" id="blog-container" data-current-page="1" data-total-pages="5">
+						<div id="blog-container" data-current-page="1" data-total-pages="5">
+							<div class="title">Projects</div>
 							<!-- Page 1 Items -->
 							<div class="blog-page" data-page="1">
 								<div class="col col-d-12 col-t-12 col-m-12 grid-item design border-line-h">
@@ -313,13 +314,9 @@
 											<a href="#popup-1" class="has-popup-media">
 												<img src="images/works/work4.jpg" alt="" />
 												<span class="info">
-													<span class="ion ion-images"></span>
+													<span class="text-overlay">Real-Time Credit Card Fraud Detection System</span>
 												</span>
 											</a>
-										</div>
-										<div class="desc">
-											<a href="#popup-1" class="name has-popup-media">Real-Time Credit Card Fraud Detection System</a>
-											<div class="category">Content</div>
 										</div>
 										<div id="popup-1" class="popup-box mfp-fade mfp-hide">
 											<div class="content">
@@ -352,13 +349,9 @@
 											<a href="#popup-2" class="has-popup-media">
 												<img src="images/works/work4.jpg" alt="" />
 												<span class="info">
-													<span class="ion ion-images"></span>
+													<span class="text-overlay">Code Smell Detection</span>
 												</span>
 											</a>
-										</div>
-										<div class="desc">
-											<a href="#popup-1" class="name has-popup-media">Code Smell Detection</a>
-											<div class="category">Content</div>
 										</div>
 										<div id="popup-2" class="popup-box mfp-fade mfp-hide">
 											<div class="content">
@@ -391,13 +384,9 @@
 											<a href="#popup-3" class="has-popup-media">
 												<img src="images/works/work4.jpg" alt="" />
 												<span class="info">
-													<span class="ion ion-images"></span>
+													<span class="text-overlay">Emotion and Gender Classification</span>
 												</span>
 											</a>
-										</div>
-										<div class="desc">
-											<a href="#popup-3" class="name has-popup-media">Emotion and Gender Classification</a>
-											<div class="category">Content</div>
 										</div>
 										<div id="popup-3" class="popup-box mfp-fade mfp-hide">
 											<div class="content">
@@ -430,13 +419,9 @@
 											<a href="#popup-4" class="has-popup-media">
 												<img src="images/works/work4.jpg" alt="" />
 												<span class="info">
-													<span class="ion ion-images"></span>
+													<span class="text-overlay">Face Detection System</span>
 												</span>
 											</a>
-										</div>
-										<div class="desc">
-											<a href="#popup-4" class="name has-popup-media">Face Detection System</a>
-											<div class="category">Content</div>
 										</div>
 										<div id="popup-4" class="popup-box mfp-fade mfp-hide">
 											<div class="content">
@@ -469,13 +454,9 @@
 											<a href="#popup-5" class="has-popup-media">
 												<img src="images/works/work4.jpg" alt="" />
 												<span class="info">
-													<span class="ion ion-images"></span>
+													<span class="text-overlay">Twitter Sentiment Analysis Pipeline</span>
 												</span>
 											</a>
-										</div>
-										<div class="desc">
-											<a href="#popup-5" class="name has-popup-media">Twitter Sentiment Analysis Pipeline</a>
-											<div class="category">Content</div>
 										</div>
 										<div id="popup-5" class="popup-box mfp-fade mfp-hide">
 											<div class="content">
@@ -506,8 +487,8 @@
 					<div class="pager">
 						<nav class="navigation pagination">
 							<div class="nav-links">
-								<a class="page-numbers prev disabled" href="#"><span>&lt;</span></a>
-								<a class="page-numbers next" href="#"><span>&gt;</span></a>
+								<button class="mfp-arrow mfp-arrow-left mfp-prevent-close page-numbers prev disabled" href="#"></button>
+								<button class="mfp-arrow mfp-arrow-right mfp-prevent-close page-numbers next" href="#" ></button>
 							</div>
 						</nav>
 					</div>
@@ -516,35 +497,19 @@
 			<div class="card-inner" id="skills-card">
 				<div class="card-wrap">
 					<div class="content works">
-						<div class="title">Certifications</div>
+						<div class="title">Skill Set</div>
 						<div class="filter-menu filter-button-group">
-							<div class="f_btn active">
-								<label><input type="radio" name="fl_radio" value="grid-item" />All</label>
+							<div class="f_btn">
+								<label><input type="radio" name="fl_radio" value="photo" />Technical</label>
 							</div>
 							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="photo" />Microsoft</label>
+								<label><input type="radio" name="fl_radio" value="gallery" />Soft</label>
 							</div>
 							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="gallery" />Google</label>
-							</div>
-							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="video" />TCSion</label>
-							</div>
-							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="music" />Udemy</label>
-							</div>
-							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="music" />LinkedIn</label>
-							</div>
-							<div class="f_btn">
-								<label><input type="radio" name="fl_radio" value="music" />WebTek</label>
+								<label><input type="radio" name="fl_radio" value="video" />Hobbies</label>
 							</div>
 						</div>
 						<div class="row grid-items border-line-v">
-							<div class="section">
-								<h2>Skill Proficiency</h2>
-								<canvas id="skillsChart" width="400" height="200"></canvas>
-							</div>
 							<div class="col col-d-6 col-t-6 col-m-12 grid-item video border-line-h">
 								<div class="box-item">
 									<div class="image">

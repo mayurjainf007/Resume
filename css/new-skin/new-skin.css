@@ -1835,8 +1835,8 @@ iframe, object {
 }
 
 .pager .nav-links {
-	margin: 30px 0 0 0;
-	padding: 13px;
+	margin: 0 0 0 0;
+	padding: 0;
 	background: #fafafa;
 	border-radius: 4px;
 }
@@ -1846,43 +1846,28 @@ h2.screen-reader-text {
 }
 
 .page-numbers, .page-links a, .nav-links a {
-	position: relative;
-	margin: 0 7px;
+	position: absolute;
+	margin: -40px 5px;
 	display: inline-block;
 	vertical-align: top;
 	color: #999;
 }
 
 .prev.page-numbers:before, .next.page-numbers:before {
-	margin-top: -6px;
-	position: absolute;
 	content: '';
 	left: 0;
-	top: 50%;
 	display: block;
-	width: 11px;
-	height: 12px;
 	background: url(../../images/pag.png) no-repeat center center;
 	background-size: contain;
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
 
 .next.page-numbers:before {
-	left: auto;
-	right: 0;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
-}
-
-.prev.page-numbers:hover:before {
-	left: -4px;
-}
-
-.next.page-numbers:hover:before {
-	right: -4px;
 }
 
 .page-numbers.current {
@@ -2655,4 +2640,15 @@ a.next.page-numbers:hover {
 	.container {
 	    padding-top: 118px;
 	}
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* or any color that contrasts well with the background */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
