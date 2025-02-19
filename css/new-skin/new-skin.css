@@ -2652,3 +2652,8 @@ a.next.page-numbers:hover {
   font-weight: bold;
   text-align: center;
 }
+
+.client-item img {
+    max-width: 150px;  /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
