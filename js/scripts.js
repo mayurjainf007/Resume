@@ -652,6 +652,35 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $(".skill-item").hover(
+        function() {
+            $(this).find(".sub-skills").stop(true, true).fadeIn(200);
+        },
+        function() {
+            $(this).find(".sub-skills").stop(true, true).fadeOut(200);
+        }
+    );
+});
+
+$(document).ready(function() {
+    $(".skill-item").hover(
+        function() {
+            // Hide all other skills
+            $(".skill-item").not(this).css("opacity", "0").fadeOut(0);
+
+            // Show sub-skills for the hovered item
+            $(this).find(".sub-skills").fadeIn(0);
+        },
+        function() {
+            // Reset opacity and show all skills again
+            $(".skill-item").css("opacity", "1").fadeIn(0);
+
+            // Hide sub-skills when mouse leaves
+            $(this).find(".sub-skills").fadeOut(0);
+        }
+    );
+});
 
 /*
 	Google Map Options
