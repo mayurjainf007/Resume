@@ -1016,3 +1016,108 @@ canvas {
 	margin: 20px auto;
     display: block;
 }
+
+/* Skill Set*/
+
+/* Remove default bullet points */
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Skill item (main category) styling */
+.skill-item {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hide all other skills when hovering */
+.skills-list:hover .skill-item {
+    opacity: 0;
+	padding: 0;
+    transform: scale(0.9);
+}
+
+/* Keep hovered skill visible */
+.skills-list .skill-item:hover {
+    opacity: 1;
+    transform: scale(1);
+	padding: 20px 20px 0px 20px;
+	margin-bottom: 25px;
+}
+
+/* Make skill title a small circle on hover */
+.skill-item:hover .skill-title {
+    background: rgba(120, 204, 109, 0.9);
+    color: transparent;
+	padding: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hide text inside hovered skill title */
+.skill-item:hover .skill-title::after {
+    content: "";
+	padding: 0;
+}
+
+/* Hide sub-skills initially */
+.sub-skills {
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Sub-skills in two neat columns */
+.sub-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Show sub-skills only on hover */
+.skill-item:hover .sub-skills {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(10px);
+}
+
+/* Style for sub-skills list items */
+.sub-skills li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+.sub-skills li:last-child {
+    border-bottom: none;
+}
+
+/* Hide other skill titles completely */
+.skills-list:hover .skill-item:not(:hover) {
+    display: none;
+}
