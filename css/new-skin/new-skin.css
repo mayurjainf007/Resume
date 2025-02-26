@@ -1259,12 +1259,12 @@ input[type="file"] {
 	z-index: 2;
 }
 
-.content.works .filter-menu .f_btn {
+.content.works .filter-menu .f_btn .s_btn {
 	font-size: 14px;
 	color: #646464;
 }
 
-.content.works .filter-menu .f_btn input {
+.content.works .filter-menu .f_btn .s_btn input {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -1382,7 +1382,7 @@ input[type="file"] {
 }
 
 @media (max-width: 560px) {
-	.content.works .filter-menu .f_btn {
+	.content.works .filter-menu .f_btn .s_btn {
 		margin-left: 0;
 		margin-right: 15px;
 	}
@@ -1551,7 +1551,7 @@ input[type="file"] {
 }
 
 @media (max-width: 680px) {
-	.content.works .filter-menu .f_btn {
+	.content.works .filter-menu .f_btn .s_btn {
 		margin-left: 0;
 		margin-right: 15px;
 	}
@@ -1857,7 +1857,7 @@ h2.screen-reader-text {
 	content: '';
 	left: 0;
 	display: block;
-	background: url(../../images/pag.png) no-repeat center center;
+	background: url(../../images/bg1.jpg) no-repeat center center;
 	background-size: contain;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;

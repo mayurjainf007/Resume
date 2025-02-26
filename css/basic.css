@@ -1121,3 +1121,44 @@ canvas {
 .skills-list:hover .skill-item:not(:hover) {
     display: none;
 }
+
+
+.f_btn {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.f_btn:hover {
+    color: #78cc6d;
+}
+
+.f_btn input {
+    display: none;
+}
+
+.f_btn.active {
+    color: #78cc6d;
+}
+
+
+
+.s_btn {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.s_btn:hover {
+    color: #78cc6d;
+}
+
+.s_btn input {
+    display: none;
+}
+
+.s_btn.active {
+    color: #78cc6d;
+}
