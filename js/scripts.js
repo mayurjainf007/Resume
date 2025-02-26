@@ -249,31 +249,47 @@ $(function () {
 	});
 
 
+
+/* button Function */
+	$(document).ready(function() {
+    		var $container = $('.grid-items'); // Ensure this matches your Isotope container class
+    		$container.imagesLoaded(function() {
+        		$container.isotope({
+            			itemSelector: '.grid-item'
+        		});
+        		$('.filter-button-group .s_btn:first-child').addClass('active');
+        		var defaultFilter = $('.filter-button-group .s_btn:first-child input').val();
+        		$container.isotope({ filter: '.' + defaultFilter });
+    		});
+    		$('.filter-button-group').on('click', '.s_btn', function() {
+        		var filterValue = $(this).find('input').val();
+			$container.isotope({ filter: '.' + filterValue });
+			$(this).addClass('active').siblings().removeClass('active');
+    		});
+	});
+
 	/*
 		Filter items on button click
 	*/
-	$('.filter-button-group').on( 'click', '.f_btn', function() {
-		var filterValue = $(this).find('input').val();
-		$container.isotope({ filter: '.'+filterValue });
-		$('.filter-button-group .f_btn').removeClass('active');
-		$(this).addClass('active');
+	$(document).ready(function() {
+    		var $container = $('.grid-items'); // Ensure this matches your Isotope container class
+    		$container.imagesLoaded(function() {
+        		$container.isotope({
+            			itemSelector: '.grid-item'
+        		});
+        		$('.filter-button-group .f_btn:first-child').addClass('active');
+        		var defaultFilter = $('.filter-button-group .f_btn:first-child input').val();
+        		$container.isotope({ filter: '.' + defaultFilter });
+    		});
+    		$('.filter-button-group').on('click', '.f_btn', function() {
+        		var filterValue = $(this).find('input').val();
+			$container.isotope({ filter: '.' + filterValue });
+			$(this).addClass('active').siblings().removeClass('active');
+    		});
 	});
-	
+
+
 		
-	// Handle experience filter
-    $("input[name='fl_radio']").change(function () {
-        var selectedValue = $(this).val();
-        
-        // Hide all grid items within the works-card section
-        $("#works-card .grid-item").hide();
-        
-        // Show the selected grid item
-        $("#works-card ." + selectedValue).fadeIn(); // Smooth transition
-    });
-
-    // Initialize by showing the active radio button's content
-    $("input[name='fl_radio']:checked").trigger("change");
-
 	
 	/*
 		Gallery popup
@@ -548,28 +564,6 @@ $(function () {
 			$(this).html('<div class="first-letter">'+ $(this).html() + '</div>');
 		}
 	});
-	const ctx = document.getElementById('skillsChart').getContext('2d');
-	const skillsChart = new Chart(ctx, {
-		type: 'bar',
-        data: {
-			labels: ['Python', 'SQL', 'TensorFlow', 'PyTorch', 'AWS'],
-			datasets: [{
-				label: 'Proficiency (%)',
-				data: [90, 85, 80, 75, 70],
-				backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-			}]
-		},
-		options: {
-			scales: {
-				y: {
-					beginAtZero: true
-				}
-			}
-		}
-	});
-
 });
 
 $(document).on('click', '.pager .page-numbers', function (e) {

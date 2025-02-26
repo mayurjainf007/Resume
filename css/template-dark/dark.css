@@ -378,7 +378,7 @@ textarea:focus:-ms-input-placeholder {
 	background-color: #31313a;
 }
 
-.content.works .filter-menu .f_btn {
+.content.works .filter-menu .f_btn .s_btn {
 	color: rgba(255, 255, 255, 0.85);
 }
 

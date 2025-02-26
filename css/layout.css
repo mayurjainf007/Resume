@@ -1096,7 +1096,7 @@
 	right: 0;
 }
 
-.content.works .filter-menu .f_btn {
+.content.works .filter-menu .f_btn .s_btn {
 	margin: 0 0 0 15px;
 	padding: 0;
 	position: relative;
@@ -1110,11 +1110,11 @@
 	border: none;
 }
 
-.content.works .filter-menu .f_btn.active {
+.content.works .filter-menu .f_btn .s_btn.active {
 	color: #78cc6d;
 }
 
-.content.works .filter-menu .f_btn label {
+.content.works .filter-menu .f_btn .s_btn label {
 	cursor: pointer;
 }
 
@@ -1390,7 +1390,7 @@
 	animation: none;
 }
 
-.content.works .filter-menu .f_btn input {
+.content.works .filter-menu .f_btn .s_btn input {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -1560,7 +1560,7 @@
 	-o-transition: visibility 1s linear, opacity 0s linear;
 }
 
-.content.works .filter-menu .f_btn input {
+.content.works .filter-menu .f_btn .s_btn input {
 	cursor: pointer;
 }
 
