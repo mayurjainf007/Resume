@@ -1031,10 +1031,9 @@ canvas {
     position: relative;
     cursor: pointer;
     padding: 0;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1049,6 +1048,7 @@ canvas {
 .skills-list .skill-item:hover {
     opacity: 1;
     transform: scale(1);
+	font-size: 0px;
 	padding: 20px 20px 0px 20px;
 	margin-bottom: 25px;
 }
@@ -1057,10 +1057,8 @@ canvas {
 .skill-item:hover .skill-title {
     background: rgba(120, 204, 109, 0.9);
     color: transparent;
-	padding: 0;
     width: 50px;
     height: 50px;
-    display: inline-block;
     border-radius: 50%;
     text-align: center;
     transition: all 0.3s ease-in-out;
@@ -1075,14 +1073,12 @@ canvas {
 /* Hide sub-skills initially */
 .sub-skills {
     position: absolute;
-    left: 50%;
-    top: 110%;
-    background: rgba(0, 0, 0, 0.85);
+    left: 30%;
+    top: 100%;
     color: white;
     padding: 15px;
     border-radius: 15px;
-    width: 250px;
-    display: flex;
+    display: -webkit-inline-box;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -1103,7 +1099,7 @@ canvas {
 .skill-item:hover .sub-skills {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateY(-100%);
 }
 
 /* Style for sub-skills list items */
@@ -1162,3 +1158,70 @@ canvas {
 .s_btn.active {
     color: #78cc6d;
 }
+
+.business-skills-container {
+    position: relative;
+    width: 650px;
+    height: 550px;
+    margin: -50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-box {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    background: #8B0000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.skill {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #E5F5F9;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill i {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Hover effect */
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Positioning skills around the center */
+.skill1 { top: 5%; left: 40%; } /* Data Analysis */
+.skill2 { top: 15%; right: 10%; } /* Understanding of Economics */
+.skill3 { top: 35%; right: 0; } /* Emotional Intelligence */
+.skill4 { top: 60%; right: 5%; } /* Networking */
+.skill5 { top: 80%; right: 20%; } /* Leadership */
+.skill6 { bottom: 5%; left: 40%; } /* Business Management */
+.skill7 { bottom: 15%; left: 10%; } /* Project Management */
+.skill8 { bottom: 35%; left: 0; } /* Financial Management */
+.skill9 { bottom: 60%; left: 5%; } /* Communication */
+.skill10 { top: 15%; left: 10%; } /* Financial Accounting */
