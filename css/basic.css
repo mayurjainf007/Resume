@@ -1031,7 +1031,6 @@ canvas {
     position: relative;
     cursor: pointer;
     padding: 0;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     display: inline-block;
     text-align: center;
@@ -1048,8 +1047,10 @@ canvas {
 /* Keep hovered skill visible */
 .skills-list .skill-item:hover {
     opacity: 1;
-    transform: scale(1);
 	padding: 20px 20px 0px 20px;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-size: 0px;
 	margin-bottom: 25px;
 }
 
@@ -1074,15 +1075,14 @@ canvas {
 
 /* Hide sub-skills initially */
 .sub-skills {
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 110%;
     background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 15px;
     border-radius: 15px;
-    width: 250px;
-    display: flex;
+    display: -webkit-inline-box;
     justify-content: center;
     align-items: center;
     gap: 20px;
