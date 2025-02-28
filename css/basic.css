@@ -1079,13 +1079,14 @@ canvas {
     color: white;
     padding: 15px;
     border-radius: 15px;
-    display: -webkit-inline-box;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
+	max-width: 100%;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -1118,6 +1119,7 @@ canvas {
 .skills-list:hover .skill-item:not(:hover) {
     display: none;
 }
+
 
 
 .f_btn {
