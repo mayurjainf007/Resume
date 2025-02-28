@@ -1079,13 +1079,14 @@ canvas {
     color: white;
     padding: 15px;
     border-radius: 15px;
-    display: -webkit-inline-box;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
+	max-width: 100%;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -1118,6 +1119,7 @@ canvas {
 .skills-list:hover .skill-item:not(:hover) {
     display: none;
 }
+
 
 
 .f_btn {
@@ -1162,9 +1164,9 @@ canvas {
 
 .business-skills-container {
     position: relative;
-    width: 650px;
-    height: 550px;
-    margin: -50px auto;
+    width: 680px;
+    height: 545px;
+    margin: -40px -35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1216,13 +1218,13 @@ canvas {
 }
 
 /* Positioning skills around the center */
-.skill1 { top: 5%; left: 40%; } /* Data Analysis */
-.skill2 { top: 15%; right: 10%; } /* Understanding of Economics */
-.skill3 { top: 35%; right: 0; } /* Emotional Intelligence */
-.skill4 { top: 60%; right: 5%; } /* Networking */
-.skill5 { top: 80%; right: 20%; } /* Leadership */
-.skill6 { bottom: 5%; left: 40%; } /* Business Management */
-.skill7 { bottom: 15%; left: 10%; } /* Project Management */
-.skill8 { bottom: 35%; left: 0; } /* Financial Management */
-.skill9 { bottom: 60%; left: 5%; } /* Communication */
-.skill10 { top: 15%; left: 10%; } /* Financial Accounting */
+.skill1 { top: 5%; right: 32%; } /* Data Analysis */
+.skill2 { top: 17%; right: 15.5%; } /* Understanding of Economics */
+.skill3 { top: 38%; right: 6%; } /* Emotional Intelligence */
+.skill4 { bottom: 18.5%; right: 14.5%; } /* Networking */
+.skill5 { bottom: 7%; right: 31.25%; } /* Leadership */
+.skill6 { bottom: 7%; left: 32%; } /* Business Management */
+.skill7 { bottom: 20%; left: 15.5%; } /* Project Management */
+.skill8 { top: 38%; left: 5%; } /* Financial Management */
+.skill9 { top: 17%; left: 14.5%; } /* Communication */
+.skill0 { top: 5%; left: 31%; } /* Financial Accounting */
