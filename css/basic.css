@@ -1019,107 +1019,85 @@ canvas {
 
 /* Skill Set*/
 
-/* Remove default bullet points */
-.skills-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.skill-set-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Skill item (main category) styling */
-.skill-item {
-    position: relative;
+
+/* Skill Categories */
+.skill-container {
+    margin-bottom: 10px;
+}
+
+.skill-category {
     cursor: pointer;
-    padding: 0;
-    border-radius: 30px;
-    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    color: white;
     text-align: left;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s;
 }
 
-/* Hide all other skills when hovering */
-.skills-list:hover .skill-item {
-    opacity: 0;
-	padding: 0;
-    transform: scale(0.9);
-}
-
-/* Keep hovered skill visible */
-.skills-list .skill-item:hover {
-    opacity: 1;
-	padding: 20px 20px 0px 20px;
-	white-space: nowrap;
-	text-transform: uppercase;
-	font-size: 0px;
-	margin-bottom: 25px;
-}
-
-/* Make skill title a small circle on hover */
-.skill-item:hover .skill-title {
+.skill-category:hover{
+    font-size: 0;
     background: rgba(120, 204, 109, 0.9);
     color: transparent;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3sease-in-out;
 }
-
-/* Hide text inside hovered skill title */
-.skill-item:hover .skill-title::after {
-    content: "";
-	padding: 0;
-}
-
-/* Hide sub-skills initially */
-.sub-skills {
-    position: absolute;
-    left: 30%;
-    top: 100%;
-    color: white;
-    padding: 15px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-	max-width: 100%;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Sub-skills in two neat columns */
-.sub-column {
-    display: flex;
-    flex-direction: column;
+.skill-category::after{
+    font-size: 0;
+    background: rgba(120, 204, 109, 0.9);
+    color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     text-align: center;
+    transition: all 0.3sease-in-out;
 }
 
-/* Show sub-skills only on hover */
-.skill-item:hover .sub-skills {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-100%);
-}
-
-/* Style for sub-skills list items */
-.sub-skills li {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 14px;
-}
-
-.sub-skills li:last-child {
-    border-bottom: none;
-}
-
-/* Hide other skill titles completely */
-.skills-list:hover .skill-item:not(:hover) {
+/* Subskills */
+.subskills {
     display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+	background: #2a2a2a;
+    margin-top: 5px;
 }
 
+.subskill {
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 100px;
+    max-width: 180px;
+    transition: transform 0.3s;
+}
+
+.subskill:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subskill {
+        min-width: 80px;
+        max-width: 140px;
+        font-size: 12px;
+    }
+}
 
 
 .f_btn {
