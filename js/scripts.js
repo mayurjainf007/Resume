@@ -658,6 +658,13 @@ function toggleSubskills(skillItem) {
         }
     });
 
+	document.querySelectorAll(".skill-category").forEach(item => {
+        if (item !== skillItem) {
+            item.classList.remove("active-skill");
+            item.classList.add("passive-skill"); // Add passive class to other items
+        }
+    });
+
     // Toggle current subskills
     if (subskillsContainer.innerHTML.trim() === "") {
         subskillsContainer.style.display = "flex";
@@ -666,9 +673,13 @@ function toggleSubskills(skillItem) {
         ).join("");
 
         adjustSubskillAlignment(subskillsContainer);
+		skillItem.classList.add("active-skill"); // Highlight clicked skill
+        skillItem.classList.remove("passive-skill"); // Ensure it doesn't turn gray
     } else {
         subskillsContainer.innerHTML = "";
         subskillsContainer.style.display = "none";
+        skillItem.classList.remove("active-skill");
+        skillItem.classList.add("passive-skill"); // Turns gray when deselected
     }
 }
 
@@ -687,6 +698,28 @@ function adjustSubskillAlignment(container) {
         }
     });
 }
+
+$(document).ready(function () {
+    $('.has-popup-media').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+        closeBtnInside: true,
+        fixedContentPos: true,
+        callbacks: {
+            open: function () {
+                $('.mfp-content').css({
+                    'width': 'auto',
+                    'height': 'auto',
+                    'max-width': '90vw',
+                    'max-height': '90vh',
+                    'overflow': 'auto'
+                });
+            }
+        }
+    });
+});
 
 
 /*
