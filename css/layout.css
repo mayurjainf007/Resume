@@ -1300,7 +1300,6 @@
 	overflow: auto;
 	width: 720px;
 	height: 100%;
-	background: #ffffff;
 }
 
 .mfp-wrap.popup-box-inline .mfp-container {
@@ -1439,7 +1438,8 @@
 	-webkit-overflow-scrolling: touch;
 	width: 720px;
 	height: 100%;
-	background: #ffffff;
+	background: transparent;
+	display: grid;
 }
 
 @media (max-width: 720px) {

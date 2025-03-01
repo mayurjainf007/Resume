@@ -1037,7 +1037,7 @@ canvas {
     font-size: 18px;
     font-weight: bold;
     padding: 12px;
-    color: white;
+    color: black;
     text-align: left;
     transition: background 0.3s;
 }
@@ -1135,7 +1135,7 @@ canvas {
     position: relative;
     width: 680px;
     height: 545px;
-    margin: -40px -35px;
+    margin: 0px -15px;
     display: flex;
     justify-content: center;
     align-items: center;

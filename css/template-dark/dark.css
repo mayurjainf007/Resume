@@ -397,7 +397,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .mfp-wrap.popup-box-inline {
-	background: #31313a;
+	background: transparent;
+	display: grid;
 }
 
 .post-box .blog-detail {
@@ -643,4 +644,8 @@ input[type="submit"]:hover {
 
 .revs-item .info .company {
 	color: #999999;
+}
+
+.skill-category {
+    color: white;
 }
