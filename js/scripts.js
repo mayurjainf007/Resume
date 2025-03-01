@@ -248,20 +248,28 @@ $(function () {
 		});
 	});
 
+	var $container = $('.sgrid-items');
+	$container.imagesLoaded(function () {
+		$container.isotope({
+			percentPosition: true,
+			itemSelector: '.grid-item'
+		});
+	});
+
 
 
 	/* button Function */
 	$(document).ready(function () {
-		var $container = $('.grid-items'); // Ensure this matches your Isotope container class
+		var $container = $('.sgrid-items'); // Ensure this matches your Isotope container class
 		$container.imagesLoaded(function () {
 			$container.isotope({
-				itemSelector: '.grid-item'
+				itemSelector: '.sgrid-item'
 			});
-			$('.filter-button-group .s_btn:first-child').addClass('active');
-			var defaultFilter = $('.filter-button-group .s_btn:first-child input').val();
+			$('.sfilter-button-group .s_btn:first-child').addClass('active');
+			var defaultFilter = $('.sfilter-button-group .s_btn:first-child input').val();
 			$container.isotope({ filter: '.' + defaultFilter });
 		});
-		$('.filter-button-group').on('click', '.s_btn', function () {
+		$('.sfilter-button-group').on('click', '.s_btn', function () {
 			var filterValue = $(this).find('input').val();
 			$container.isotope({ filter: '.' + filterValue });
 			$(this).addClass('active').siblings().removeClass('active');
@@ -699,35 +707,13 @@ function adjustSubskillAlignment(container) {
     });
 }
 
-$(document).ready(function () {
-    $('.has-popup-media').magnificPopup({
-        type: 'inline',
-        midClick: true,
-        removalDelay: 300,
-        mainClass: 'mfp-fade',
-        closeBtnInside: true,
-        fixedContentPos: true,
-        callbacks: {
-            open: function () {
-                $('.mfp-content').css({
-                    'width': 'auto',
-                    'height': 'auto',
-                    'max-width': '90vw',
-                    'max-height': '90vh',
-                    'overflow': 'auto'
-                });
-            }
-        }
-    });
-});
-
 
 /*
 	Google Map Options
 */
 
 function initMap() {
-	var myLatlng = new google.maps.LatLng(28.6482022, 77.1364384); // <- Your latitude and longitude
+	var myLatlng = new google.maps.LatLng(33.791260,-118.136041); // <- Your latitude and longitude
 	var styles = [
 		{
 			"featureType": "water",
