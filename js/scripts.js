@@ -1,7 +1,9 @@
-/*
-*   Author: mayur jain
-*/
-
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
 
 /*
 	Preloader

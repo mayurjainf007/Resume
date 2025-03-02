@@ -1,7 +1,9 @@
-/*
-
-
- */
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
 
 ( function( window, factory ) {
   // universal module definition
@@ -139,13 +141,6 @@ return jQueryBridget;
 
 }));
 
-/**
- * EvEmitter v1.1.0
- * Lil' event emitter
- * MIT License
- */
-
-/* jshint unused: true, undef: true, strict: true */
 
 ( function( global, factory ) {
   // universal module definition
@@ -251,15 +246,6 @@ proto.allOff = function() {
 return EvEmitter;
 
 }));
-
-/*!
- * getSize v2.0.3
- * measure size of elements
- * MIT license
- */
-
-/* jshint browser: true, strict: true, undef: true, unused: true */
-/* globals console: false */
 
 ( function( window, factory ) {
   /* jshint strict: false */ /* globals define, module */
@@ -458,14 +444,6 @@ return getSize;
 
 });
 
-/**
- * matchesSelector v2.0.2
- * matchesSelector( element, '.selector' )
- * MIT license
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
-
 ( function( window, factory ) {
   /*global define: false, module: false */
   'use strict';
@@ -511,13 +489,6 @@ return getSize;
   };
 
 }));
-
-/**
- * Fizzy UI utils v2.0.7
- * MIT license
- */
-
-/*jshint browser: true, undef: true, unused: true, strict: true */
 
 ( function( window, factory ) {
   // universal module definition
@@ -1309,12 +1280,6 @@ return Item;
 
 }));
 
-/*!
- * Outlayer v2.1.1
- * the brains and guts of a layout library
- * MIT license
- */
-
 ( function( window, factory ) {
   'use strict';
   // universal module definition
@@ -1622,7 +1587,6 @@ proto._layoutItems = function( items, isInstant ) {
   this._emitCompleteOnItems( 'layout', items );
 
   if ( !items || !items.length ) {
-    // no items, emit event with empty array
     return;
   }
 
