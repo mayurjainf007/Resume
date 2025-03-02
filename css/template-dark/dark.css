@@ -649,3 +649,20 @@ input[type="submit"]:hover {
 .skill-category {
     color: white;
 }
+
+@keyframes fadeGlow {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+}
+
+#home-card .image .profile{
+	position: relative; /* Ensures the glow effect stays behind */
+    display: inline-block;
+    animation: fadeGlow 3s infinite alternate; /* Smooth pulsing effect */
+}
+
+#home-card .image a {
+    position: relative; /* Ensures the image stays on top */
+    z-index: 2;
+}
