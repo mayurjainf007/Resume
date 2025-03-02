@@ -1211,3 +1211,19 @@ canvas {
     object-fit: contain; 
     margin: 5px; 
 }
+
+.client-items {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.client-items img{
+	max-width: 150px;
+	height: auto;
+}
+
+.education{
+	text-align: center;
+}
