@@ -1,3 +1,10 @@
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
+
 /* 1. Template Dark */
 
 * {
@@ -397,7 +404,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .mfp-wrap.popup-box-inline {
-	background: #31313a;
+	background: transparent;
+	display: grid;
 }
 
 .post-box .blog-detail {
@@ -643,4 +651,25 @@ input[type="submit"]:hover {
 
 .revs-item .info .company {
 	color: #999999;
+}
+
+.skill-category {
+    color: white;
+}
+
+@keyframes fadeGlow {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+}
+
+#home-card .image .profile{
+	position: relative; /* Ensures the glow effect stays behind */
+    display: inline-block;
+    animation: fadeGlow 3s infinite alternate; /* Smooth pulsing effect */
+}
+
+#home-card .image a {
+    position: relative; /* Ensures the image stays on top */
+    z-index: 2;
 }

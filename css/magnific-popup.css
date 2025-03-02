@@ -1,3 +1,10 @@
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -135,7 +142,7 @@ button::-moz-focus-inner {
   padding: 0 0 18px 10px;
   color: #FFF;
   font-style: normal;
-  font-size: 28px;
+  font-size: 50px;
   font-family: Arial, Baskerville, monospace; }
   .mfp-close:hover,
   .mfp-close:focus {
@@ -177,7 +184,7 @@ button::-moz-focus-inner {
     margin-top: -50px; }
   .mfp-arrow:hover,
   .mfp-arrow:focus {
-    opacity: 1; }
+    visibility: visible; }
   .mfp-arrow:before,
   .mfp-arrow:after {
     content: '';
@@ -207,7 +214,7 @@ button::-moz-focus-inner {
     margin-left: 31px; }
   .mfp-arrow-left:before {
     margin-left: 25px;
-    border-right: 27px solid #3F3F3F; }
+    border-right: 27px solid #000; }
 
 .mfp-arrow-right {
 	transition: all 0.3s ease 0s;
@@ -216,7 +223,7 @@ button::-moz-focus-inner {
     border-left: 17px solid #FFF;
     margin-left: 39px; }
   .mfp-arrow-right:before {
-    border-left: 27px solid #3F3F3F; }
+    border-left: 27px solid #000; }
 
 .mfp-iframe-holder {
   padding-top: 40px;

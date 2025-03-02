@@ -1,6 +1,10 @@
-/*! Magnific Popup - v1.1.0 - 2016-02-20
-* http://dimsemenov.com/plugins/magnific-popup/
-* Copyright (c) 2016 Dmitry Semenov; */
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
+
 ;(function (factory) { 
 if (typeof define === 'function' && define.amd) { 
  // AMD. Register as an anonymous module. 
@@ -800,7 +804,6 @@ MagnificPopup.prototype = {
 	},
 
 	_getScrollbarSize: function() {
-		// thx David
 		if(mfp.scrollbarSize === undefined) {
 			var scrollDiv = document.createElement("div");
 			scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';

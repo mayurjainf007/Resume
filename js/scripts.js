@@ -1,7 +1,9 @@
-/*
-*   Author: mayur jain
-*/
-
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
 
 /*
 	Preloader
@@ -248,20 +250,28 @@ $(function () {
 		});
 	});
 
+	var $container = $('.sgrid-items');
+	$container.imagesLoaded(function () {
+		$container.isotope({
+			percentPosition: true,
+			itemSelector: '.grid-item'
+		});
+	});
+
 
 
 	/* button Function */
 	$(document).ready(function () {
-		var $container = $('.grid-items'); // Ensure this matches your Isotope container class
+		var $container = $('.sgrid-items'); // Ensure this matches your Isotope container class
 		$container.imagesLoaded(function () {
 			$container.isotope({
-				itemSelector: '.grid-item'
+				itemSelector: '.sgrid-item'
 			});
-			$('.filter-button-group .s_btn:first-child').addClass('active');
-			var defaultFilter = $('.filter-button-group .s_btn:first-child input').val();
+			$('.sfilter-button-group .s_btn:first-child').addClass('active');
+			var defaultFilter = $('.sfilter-button-group .s_btn:first-child input').val();
 			$container.isotope({ filter: '.' + defaultFilter });
 		});
-		$('.filter-button-group').on('click', '.s_btn', function () {
+		$('.sfilter-button-group').on('click', '.s_btn', function () {
 			var filterValue = $(this).find('input').val();
 			$container.isotope({ filter: '.' + filterValue });
 			$(this).addClass('active').siblings().removeClass('active');
@@ -658,6 +668,13 @@ function toggleSubskills(skillItem) {
         }
     });
 
+	document.querySelectorAll(".skill-category").forEach(item => {
+        if (item !== skillItem) {
+            item.classList.remove("active-skill");
+            item.classList.add("passive-skill"); // Add passive class to other items
+        }
+    });
+
     // Toggle current subskills
     if (subskillsContainer.innerHTML.trim() === "") {
         subskillsContainer.style.display = "flex";
@@ -666,9 +683,13 @@ function toggleSubskills(skillItem) {
         ).join("");
 
         adjustSubskillAlignment(subskillsContainer);
+		skillItem.classList.add("active-skill"); // Highlight clicked skill
+        skillItem.classList.remove("passive-skill"); // Ensure it doesn't turn gray
     } else {
         subskillsContainer.innerHTML = "";
         subskillsContainer.style.display = "none";
+        skillItem.classList.remove("active-skill");
+        skillItem.classList.add("passive-skill"); // Turns gray when deselected
     }
 }
 
@@ -688,13 +709,27 @@ function adjustSubskillAlignment(container) {
     });
 }
 
+$(document).ready(function () {
+    $('.profile-photo').on('click', function (event) {
+        event.stopPropagation(); // Prevents event from bubbling up
+        $('.card-inner').toggleClass('active'); // Toggles visibility
+    });
+
+    // Hide when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.card-inner, .profile-photo').length) {
+            $('.card-inner').removeClass('active'); // Hides the card
+        }
+    });
+});
+
 
 /*
 	Google Map Options
 */
 
 function initMap() {
-	var myLatlng = new google.maps.LatLng(28.6482022, 77.1364384); // <- Your latitude and longitude
+	var myLatlng = new google.maps.LatLng(33.791260,-118.136041); // <- Your latitude and longitude
 	var styles = [
 		{
 			"featureType": "water",

@@ -2647,13 +2647,13 @@ a.next.page-numbers:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* or any color that contrasts well with the background */
+  color: white; 
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
 
 .client-item img {
-    max-width: 150px;  /* Adjust width as needed */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 150px;  
+    height: auto;
 }

@@ -1,12 +1,10 @@
 @charset "UTF-8";
-
-/*!
-* animate.css -http://daneden.me/animate
-* Version - 3.6.0
-* Licensed under the MIT license - http://opensource.org/licenses/MIT
-*
-* Copyright (c) 2018 Daniel Eden
-*/
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
 
 .animated {
   -webkit-animation-duration: 1s;

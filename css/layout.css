@@ -1,21 +1,9 @@
 /**
-*	Ryan - Resume/CV/vCard Template (HTML)
-*	Version: 2.5
-*	Author: beshleyua
-*	Author URL: http://themeforest.net/user/beshleyua
-*	Copyright © Cvio by beshleyua. All Rights Reserved.
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
 **/
-
-/* TABLE OF CONTENTS
-	1. Base
-	2. Container
-	3. Columns
-	4. Preloader
-	5. Typography
-	6. Forms
-	7. Alignments
-	8. Animations
-*/
 
 /*
 	1. Header
@@ -1160,7 +1148,13 @@
 }
 
 .box-item .image {
-	position: relative;
+	width: 100%;
+    height: auto;
+    max-height: 500px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-item .image a {
@@ -1169,9 +1163,11 @@
 }
 
 .box-item .image a img {
-	position: relative;
 	width: 100%;
-	height: auto;
+    height: auto;
+    max-height: 100%; /* Prevents it from exceeding the container */
+    object-fit: cover; /* Ensures it maintains aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
 }
 
 .box-item .image .info {
@@ -1181,7 +1177,7 @@
 	width: 100%;
 	height: 100%;
 	display: block;
-	opacity: 0;
+	opacity: 1;
 	text-align: center;
 	transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
@@ -1299,7 +1295,6 @@
 	overflow: auto;
 	width: 720px;
 	height: 100%;
-	background: #ffffff;
 }
 
 .mfp-wrap.popup-box-inline .mfp-container {
@@ -1438,7 +1433,8 @@
 	-webkit-overflow-scrolling: touch;
 	width: 720px;
 	height: 100%;
-	background: #ffffff;
+	background: transparent;
+	display: grid;
 }
 
 @media (max-width: 720px) {
@@ -1455,7 +1451,7 @@
 
 .pager .disabled {
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 .revs-carousel {
@@ -1624,7 +1620,7 @@
 	display: inline-block;
 	font-family: "Ionicons";
 	color: #78cc6d;
-	speak: none;
+	speak-as: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -3048,7 +3044,7 @@
 	padding: 0 50px 0 15px;
 	box-shadow: none;
 	font-weight: 400;
-	-webkit-appearance: textfield;
+	appearance: textfield;
 }
 
 .search-form input.search-submit {

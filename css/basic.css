@@ -1,13 +1,9 @@
-/* TABLE OF CONTENTS
-	1. Base
-	2. Container
-	3. Columns
-	4. Preloader
-	5. Typography
-	6. Forms
-	7. Alignments
-	8. Animations
-*/
+/**
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
 
 /*
 	1. Basic
@@ -1037,29 +1033,13 @@ canvas {
     font-size: 18px;
     font-weight: bold;
     padding: 12px;
-    color: white;
+    color: black;
     text-align: left;
     transition: background 0.3s;
 }
 
-.skill-category:hover{
-    font-size: 0;
-    background: rgba(120, 204, 109, 0.9);
-    color: transparent;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    transition: all 0.3sease-in-out;
-}
-.skill-category::after{
-    font-size: 0;
-    background: rgba(120, 204, 109, 0.9);
-    color: transparent;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
+.skill-category:hover, .skill-category:active{
+    color: rgba(120, 204, 109, 0.9);
     transition: all 0.3sease-in-out;
 }
 
@@ -1090,6 +1070,12 @@ canvas {
     transform: scale(1.1);
 }
 
+.skill-category.active-skill {
+    color: rgba(120, 204, 109, 0.9) !important;
+}
+.skill-category.passive-skill {
+    visibility: visible;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .subskill {
@@ -1144,7 +1130,7 @@ canvas {
     position: relative;
     width: 680px;
     height: 545px;
-    margin: -40px -35px;
+    margin: 0px -15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1154,7 +1140,7 @@ canvas {
     position: absolute;
     width: 160px;
     height: 50px;
-    background: #8B0000;
+    background: rgba(120, 204, 109, 0.9);
     color: white;
     display: flex;
     justify-content: center;
@@ -1206,3 +1192,34 @@ canvas {
 .skill8 { top: 38%; left: 5%; } /* Financial Management */
 .skill9 { top: 17%; left: 14.5%; } /* Communication */
 .skill0 { top: 5%; left: 31%; } /* Financial Accounting */
+
+@media (max-width: 1199px) {
+	.business-skills-container {
+        transform: scale(0.6); /* Shrinks the entire section */
+        transform-origin: center top; /* Ensures scaling happens from the top */
+		margin: 0% -25%;
+    }
+}
+
+.cert-images img {
+    width: 100px;  
+    height: 100px; 
+    object-fit: contain; 
+    margin: 5px; 
+}
+
+.client-items {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.client-items img{
+	max-width: 150px;
+	height: auto;
+}
+
+.education{
+	text-align: center;
+}

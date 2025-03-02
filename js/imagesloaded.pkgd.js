@@ -1,16 +1,9 @@
-/*!
- * imagesLoaded PACKAGED v4.1.0
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
-
 /**
- * EvEmitter v1.0.1
- * Lil' event emitter
- * MIT License
- */
-
-/* jshint unused: true, undef: true, strict: true */
+*	Mayur - Resume
+*	Version: 1.0
+*	Author: Mayur Jain
+*	Copyright © by MJ. All Rights Reserved.
+**/
 
 ( function( global, factory ) {
   // universal module definition
@@ -114,11 +107,6 @@ return EvEmitter;
 
 }));
 
-/*!
- * imagesLoaded v4.1.0
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
 
 ( function( window, factory ) { 'use strict';
   // universal module definition
