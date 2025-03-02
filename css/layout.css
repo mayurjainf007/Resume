@@ -1169,7 +1169,6 @@
 .box-item .image a img {
 	width: 100%;
     height: auto;
-	opacity: 50%;
     max-height: 100%; /* Prevents it from exceeding the container */
     object-fit: cover; /* Ensures it maintains aspect ratio */
     border-radius: 8px; /* Optional: adds rounded corners */
@@ -1182,7 +1181,7 @@
 	width: 100%;
 	height: 100%;
 	display: block;
-	opacity: 0;
+	opacity: 1;
 	text-align: center;
 	transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
@@ -1456,7 +1455,7 @@
 
 .pager .disabled {
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 .revs-carousel {
