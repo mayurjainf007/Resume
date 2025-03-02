@@ -804,7 +804,6 @@ MagnificPopup.prototype = {
 	},
 
 	_getScrollbarSize: function() {
-		// thx David
 		if(mfp.scrollbarSize === undefined) {
 			var scrollDiv = document.createElement("div");
 			scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';
