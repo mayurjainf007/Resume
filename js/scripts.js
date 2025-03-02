@@ -707,6 +707,20 @@ function adjustSubskillAlignment(container) {
     });
 }
 
+$(document).ready(function () {
+    $('.profile-photo').on('click', function (event) {
+        event.stopPropagation(); // Prevents event from bubbling up
+        $('.card-inner').toggleClass('active'); // Toggles visibility
+    });
+
+    // Hide when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.card-inner, .profile-photo').length) {
+            $('.card-inner').removeClass('active'); // Hides the card
+        }
+    });
+});
+
 
 /*
 	Google Map Options

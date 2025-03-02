@@ -1078,8 +1078,7 @@ canvas {
     color: rgba(120, 204, 109, 0.9) !important;
 }
 .skill-category.passive-skill {
-    color: #ccc !important;
-	font-weight: normal;
+    visibility: visible;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1145,7 +1144,7 @@ canvas {
     position: absolute;
     width: 160px;
     height: 50px;
-    background: #8B0000;
+    background: rgba(120, 204, 109, 0.9);
     color: white;
     display: flex;
     justify-content: center;
@@ -1197,3 +1196,18 @@ canvas {
 .skill8 { top: 38%; left: 5%; } /* Financial Management */
 .skill9 { top: 17%; left: 14.5%; } /* Communication */
 .skill0 { top: 5%; left: 31%; } /* Financial Accounting */
+
+@media (max-width: 1199px) {
+	.business-skills-container {
+        transform: scale(0.6); /* Shrinks the entire section */
+        transform-origin: center top; /* Ensures scaling happens from the top */
+		margin: 0% -25%;
+    }
+}
+
+.cert-images img {
+    width: 100px;  
+    height: 100px; 
+    object-fit: contain; 
+    margin: 5px; 
+}
