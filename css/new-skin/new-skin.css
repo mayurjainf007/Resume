@@ -374,6 +374,7 @@ strong {
 */
 
 p {
+	text-align: justify;
 	font-size: 16px;
 	line-height: 1.8em;
 	margin: 0 0 25px 0;
@@ -924,6 +925,7 @@ input[type="file"] {
 
 /* About */
 .text-box p {
+	text-align: justify;
 	margin-top: 0;
 }
 
