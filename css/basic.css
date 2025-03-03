@@ -587,6 +587,7 @@ ol ul {
 }
 
 li {
+	text-align: justify;
 	margin-bottom: 0px;
 	font-size: 16px;
 }
@@ -1221,5 +1222,5 @@ canvas {
 }
 
 .education{
-	text-align: center;
+	text-align: justify;
 }
