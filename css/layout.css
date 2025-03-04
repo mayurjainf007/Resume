@@ -486,7 +486,7 @@
 	}
 
 	.card-started .profile .slide {
-		height: 200px;
+		height: -webkit-fill-available;
 	}
 
 	.card-started .profile .image {
