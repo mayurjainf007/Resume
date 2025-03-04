@@ -618,6 +618,7 @@ $(document).ready(function () {
 	// Initially show only the home card and hide sidebar
 	$('#main-card').hide();
 	$('.top-menu').hide();
+	$('.card-inner').hide()
 
 	// Home to Main Card (Slide-in effect)
 	$('#home-card .image a').on('click', function (e) {
@@ -631,6 +632,7 @@ $(document).ready(function () {
 			$('.top-menu').fadeIn(500, function () {
 				// Trigger the about-card after the main-card appears
 				$('.top-menu a[href="#about-card"]').trigger('click');
+				$('.card-inner').show()
 			});
 		});
 	});
