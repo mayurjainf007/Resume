@@ -468,6 +468,12 @@
 	-o-transform: scaleX(-1);
 }
 
+@media (max-width: 1199px){
+	.card-started .profile .slide {
+		height: -webkit-fill-available;
+	}
+}
+
 @media (max-width: 560px) {
 	.card-started {
 		height: 480px;
@@ -483,10 +489,6 @@
 
 	.card-started .profile.no-photo {
 		padding-top: 250px;
-	}
-
-	.card-started .profile .slide {
-		height: -webkit-fill-available;
 	}
 
 	.card-started .profile .image {
