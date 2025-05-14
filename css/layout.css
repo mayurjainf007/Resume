@@ -1189,7 +1189,7 @@
 
 .box-item .image .info:before {
 	content: '';
-	position: absolute;
+	position: relative;
 	left: 0;
 	top: 0;
 	width: 100%;
