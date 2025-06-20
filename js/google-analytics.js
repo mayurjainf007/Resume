@@ -1,5 +1,5 @@
 (function(){
-  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+  const GA_MEASUREMENT_ID = 'G-3881TBDXN9';
 
   // Load the gtag.js script dynamically
   const script = document.createElement('script');
