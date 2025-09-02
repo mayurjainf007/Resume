@@ -616,9 +616,11 @@ $(document).on('click', '.pager .page-numbers', function (e) {
 
 $(document).ready(function () {
 	// Initially show only the home card and hide sidebar
-	$('#main-card').hide();
-	$('.top-menu').hide();
-	$('.card-inner').hide()
+	// Show main card by default (skip landing click)
+	$('#home-card').hide();     // hide intro card
+	$('#main-card').show();     // show resume
+	$('.top-menu').show();      // show sidebar menu
+	$('.card-inner').show();    // show content
 
 	// Home to Main Card (Slide-in effect)
 	$('#home-card .image a').on('click', function (e) {
