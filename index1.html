@@ -31,14 +31,17 @@
     <link rel="stylesheet" href="css/demos/demo-colors.css" />
     <link rel="stylesheet" href="bar/bar.css" />
     <link rel="shortcut icon" href="images/favicons/favicon.ico">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3881TBDXN9"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-3881TBDXN9');
-	</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3881TBDXN9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-3881TBDXN9');
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -278,36 +281,32 @@
               </div>
               <div class="grid-items ">
                 <div class="col col-d-12 col-t-12 col-m-12">
-				  <!-- The Cigna Group Experience -->
+                  <!-- The Cigna Group Experience -->
                   <div class="resume-items grid-item cigna">
                     <div class="resume-item active">
-                      <div class="date">April 2024 – May 2025</div>
-                      <div class="name">Data Engineer (Student Assistant)</div>
-                      <div class="company">Beach Shops</div>
+                      <div class="date">March 2024 – May 2025</div>
+                      <div class="name">Data Engineering and Analytics Assistant</div>
+                      <div class="company">Associated Student Inc.</div>
                       <div class="client-item">
                         <a target="_blank" href="https://www.csulb.edu/beach-shops">
-						  <img src="images/clients/client_csulb2.png" alt="" />
+                          <img src="images/clients/client_csulb2.png" alt="" />
                         </a>
                       </div>
-                      <ul style="font-family:Calibri;">
-                        <li> - <b>Automated student data processing workflows, reducing manual work by 40% and improving service efficiency</b>
-                          <br> Developed Python and SQL-based ETL pipelines to manage and update records for 40K+ students, staff, and faculty. Automated repetitive tasks like fund updates, ID activation, and daily data syncs - reducing human errors and allowing the team to focus on service improvements across dining, events, and sports.
+                      <ul>
+                        <li> - <b> Developed SQL/Python scripts to clean, validate, and transform student data, improving accuracy across campus reporting systems.</b>
+                          <!-- <br> I took ownership of migrating manual financial workflows into automated AWS pipelines, improving transparency and cutting hours of manual data handling per week. -->
                         </li>
                         <br>
-                        <li> - <b>Redesigned data models for service usage tracking, improving dashboard performance and reducing query time by 30%</b>
-                          <br> Analyzed card swipe data and usage patterns across campus services and optimized schema structures in the database. The redesign supported faster reporting for operations and helped administrators make quicker decisions about resource allocation and service improvements.
+                        <li> - <b> Automated recurring datasets and refreshed analytics workflows, reducing manual reporting time.</b>
+                          <!-- <br> I built machine learning-driven forecasts and visualization layers that empowered operations managers to make data-backed stocking decisions, increasing efficiency by 25%. -->
                         </li>
                         <br>
-                        <li> - <b>Monitored pipelines with alerting and logging systems, cutting data-related downtime by 25%</b>
-                          <br> Integrated structured logging and failure alerting into Airflow DAGs used for fund tracking and usage reporting. This ensured that issues like broken data loads or file mismatches were detected early, minimizing service disruption for students during peak hours.
+                        <li> - <b> Built dashboards and ad-hoc analyses to support budgeting, staffing, and operational insights for student programs.</b>
+                          <!-- <br> I led the data consolidation effort, enforcing robust data governance that raised reporting accuracy by 60% and gave leadership a single source of truth. -->
                         </li>
                         <br>
-                        <li> - <b>Performed regular data quality audits to maintain account accuracy and ensure smooth service access</b>
-                          <br> Built validation scripts to catch anomalies such as duplicate IDs, missing balances, or incorrect access levels. These checks maintained high trust in ID card services and reduced support tickets caused by access or fund errors.
-                        </li>
-                        <br>
-                        <li> - <b>Collaborated with IT and admin teams to set data governance rules, improving system usability and transparency</b>
-                          <br> Helped define access controls and data usage rules for internal teams working with ID and service data. This ensured data was used responsibly, minimized unauthorized edits, and improved reliability for reporting and audit requests.
+                        <li> - <b> Collaborated across data teams to troubleshoot issues, standardize data definitions, and improve data documentation. </b>
+                          <!-- <br> I identified repetitive pain points in finance workflows and drove automation initiatives that significantly reduced dependency on manual interventions. -->
                         </li>
                       </ul>
                     </div>
@@ -325,25 +324,29 @@
                           <img src="images/clients/client_zs3.png" alt="" />
                         </a>
                       </div>
-                      <ul style="font-family:Calibri">
-                        <li> - <b>Designed ETL pipelines in Dataiku + PySpark to optimize HCP targeting, boosting marketing ROI by 30% across U.S. regions</b>
-                          <br> Developed robust ETL workflows using Dataiku and PySpark to aggregate healthcare provider data, enhancing marketing campaigns and increasing ROI through smarter HCP targeting.
+                      <ul>
+                        <li> - <b>Led the design and implementation of PySpark + AWS Glue pipelines to integrate 100M+ HIPAA-compliant healthcare and CRM records. </b>
+                          <br> I spearheaded a modernization initiative to consolidate siloed datasets into a unified AWS data lakehouse, ensuring both scalability and regulatory compliance.
                         </li>
                         <br>
-                        <li> - <b>Implemented clustering and neural nets in Zaidyn to predict HCP behavior, improving campaign conversion by 25%</b>
-                          <br> Applied advanced clustering algorithms and neural networks within Zaidyn to analyze provider behavior, enabling personalized outreach and improved marketing conversion rates.
+                        <li> - <b> Defined governance frameworks using Collibra and AWS Lake Formation for data lineage and security. </b>
+                          <br> I collaborated with security and compliance teams to establish clear ownership, traceability, and classification rules, achieving full HIPAA and GDPR audit compliance.
                         </li>
                         <br>
-                        <li> - <b>Used NLP to guide HCP messaging; integrated outputs into Tableau dashboards for cross-functional visibility</b>
-                          <br> Leveraged natural language processing to tailor messaging to providers and visualized these insights in Tableau, facilitating transparency and better decision-making across teams.
+                        <li> - <b> Automated schema evolution and CI/CD using Terraform and GitHub Actions, enabling faster, error-free deployments. </b>
+                          <br> I led the CI/CD modernization effort, eliminating downtime during pipeline releases and reducing maintenance overhead by nearly one-third.
                         </li>
                         <br>
-                        <li> - <b>Championed data governance initiatives using Collibra to ensure compliance and traceability across 100M+ healthcare records</b>
-                          <br> Led efforts to establish data governance frameworks with Collibra, ensuring regulatory compliance and full data traceability for sensitive healthcare data.
+                        <li> - <b> Partnered with data science and analytics leads to deliver curated, feature-ready datasets for predictive adherence models. </b>
+                          <br> I bridged data engineering with data science, ensuring our teams had reliable, production-grade data for ML model training and validation.
                         </li>
                         <br>
-                        <li> - <b>Applied optimization, anomaly detection, and KNN for physician-insurer matching, enhancing targeting accuracy by 20%</b>
-                          <br> Used optimization techniques, anomaly detection, and K-nearest neighbor algorithms to improve the accuracy of physician-insurer pairings, supporting more effective healthcare campaigns.
+                        <li> - <b> Developed observability dashboards in Power BI and AWS CloudWatch for anomaly detection and operational visibility. </b>
+                          <br> I drove the implementation of proactive monitoring systems that reduced data downtime by 25% and improved stakeholder confidence in data quality.
+                        </li>
+                        <br>
+                        <li> - <b> Authored an internal whitepaper on secure ML data pipelines under regulatory frameworks. </b>
+                          <br> I documented and shared best practices to standardize secure ML enablement across the enterprise, reinforcing ZS’s data governance maturity.
                         </li>
                       </ul>
                     </div>
@@ -360,25 +363,25 @@
                           <img src="images/clients/client_tcs2.png" alt="" />
                         </a>
                       </div>
-                      <ul style="font-family:Calibri">
-                        <li> - <b>Built fraud detection models using clustering, anomaly detection, and decision forests on Azure Databricks pipelines</b>
-                          <br> Designed and implemented machine learning models leveraging clustering and anomaly detection to identify fraudulent transactions in real-time financial data streams.
+                      <ul>
+                        <li> - <b>Led the migration of a legacy data warehouse to an AWS Lakehouse architecture (S3 + Redshift + Glue). </b>
+                          <br> I directed a multi-phase modernization project that reduced ETL runtimes by 40% and improved analytics latency across risk and compliance dashboards.
                         </li>
                         <br>
-                        <li> - <b>Processed terabytes of transaction data in real time; flagged fraud with 92% accuracy using tuned ML classifiers</b>
-                          <br> Managed large-scale, real-time data processing pipelines and optimized classifiers to accurately detect fraudulent activity at high volume and speed.
+                        <li> - <b> Engineered large-scale PySpark and AWS EMR pipelines for fraud detection on multi-terabyte payment datasets. </b>
+                          <br> I built and optimized data flows that enabled 92% fraud detection accuracy through anomaly detection algorithms integrated into SparkML.
                         </li>
                         <br>
-                        <li> - <b>Managed end-to-end ML pipeline lifecycle from LLD/HLD, ADF integration to deployment via Azure DevOps + Docker</b>
-                          <br> Oversaw the full lifecycle of machine learning projects, from detailed design and Azure Data Factory integration to deployment using Azure DevOps and Docker containers.
+                        <li> - <b> Implemented real-time data streaming using Kafka and AWS Kinesis for transaction monitoring. </b>
+                          <br> I led the design of a streaming layer that empowered analysts to identify and act on fraudulent transactions in near-real time, cutting investigation times by half.
                         </li>
                         <br>
-                        <li> - <b>Delivered 10+ ETL pipelines for real-time alerting and classification; reduced false positives by 15%</b>
-                          <br> Created and maintained ETL systems for real-time data monitoring and classification, which improved fraud detection precision and reduced unnecessary alerts.
+                        <li> - <b> Defined data access and encryption policies aligned with GDPR and SOX compliance using AWS IAM, KMS, and CloudTrail. </b>
+                          <br> I ensured data protection by design, embedding compliance directly into infrastructure policies and audit frameworks.
                         </li>
                         <br>
-                        <li> - <b>Developed UAT-ready financial models with feature selection and OAT; maintained 99.5% data integrity</b>
-                          <br> Built and validated financial models for user acceptance testing, using advanced feature engineering and rigorous testing to ensure high data quality.
+                        <li> - <b> Collaborated with business and compliance teams to create secure Snowflake marts and dashboards. </b>
+                          <br> I worked cross-functionally with risk, compliance, and analytics stakeholders to democratize governed data access while preserving strict auditability.
                         </li>
                       </ul>
                     </div>
@@ -386,7 +389,7 @@
                   <!-- ClickIndia Infomedia Experience -->
                   <div class="resume-items grid-item ci" style="display: none;">
                     <div class="resume-item">
-                      <div class="date">August 2017 - July 2019</div>
+                      <div class="date">August 2018 - July 2019</div>
                       <div class="name">Software Development Engineer</div>
                       <div class="company">ClickIndia Infomedia</div>
                       <div class="client-item">
@@ -394,19 +397,18 @@
                           <img src="images/clients/client_ci1.png" alt="" />
                         </a>
                       </div>
-                      <ul style="font-family:Calibri">
-                        <li>- <b>Developed APIs with Spark and Databricks for real-time data workflows, eliminating 80% manual effort</b>
-                          <br> Built APIs to automate data collection and processing workflows in real-time. This eliminated repetitive data handling and improved productivity across business units.
+                      <ul>
+                        <li> - <b>Developed and maintained Python-based ETL jobs running on AWS Lambda and RDS for e-commerce and ad analytics. </b>
+                          <br> I was responsible for automating ingestion and transformation of API, clickstream, and user event data into structured datasets.
                         </li>
                         <br>
-                        <li>- <b>Tuned SparkSQL over Cassandra to reduce latency by 30% during high-traffic scenarios</b>
-                          <br> Optimized query performance and reduced processing latency by fine-tuning SparkSQL queries on Cassandra during peak traffic periods, ensuring a smooth user experience.
+                        <li> - <b> Optimized SQL queries and storage models for high-traffic data pipelines, reducing latency and manual reporting by 60%. </b>
+                          <br> I drove performance optimization across ETL scripts and database queries, enabling near-real-time insights for business users.
                         </li>
                         <br>
-                        <li>- <b>Optimized infrastructure for cloud performance, cutting latency by 25% across deployments</b>
-                          <br> Analyzed and refined cloud deployment configurations to enhance throughput, reduce latency, and minimize infrastructure costs for real-time applications.
+                        <li> - <b> Created automated QA validation scripts and alerts for data reliability. </b>
+                          <br> I implemented monitoring and alerting frameworks that caught data discrepancies early, improving trust in downstream analytics.
                         </li>
-                        <br>
                       </ul>
                     </div>
                   </div>
@@ -937,7 +939,7 @@
           </div>
         </div>
       </div>
-      <div class="theme_panel dark">
+      <div class="theme_panel">
         <a class="toggle-theme-panel sett" title='Dark Mode' href="index.html">
           <i class="ion ion-android-settings"></i>
         </a>
