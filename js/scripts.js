@@ -475,7 +475,7 @@ $(function () {
 	*/
 
 	if ($('#map').length) {
-		initMap();
+		return;
 	}
 
 
@@ -732,42 +732,42 @@ $(document).ready(function () {
 	Google Map Options
 */
 
-function initMap() {
-	var myLatlng = new google.maps.LatLng(33.791260,-118.136041); // <- Your latitude and longitude
-	var styles = [
-		{
-			"featureType": "water",
-			"stylers": [{
-				"color": "#d8dee9"
-			},
-			{
-				"visibility": "on"
-			}]
-		},
-		{
-			"featureType": "landscape",
-			"stylers": [{
-				"color": "#eeeeee"
-			}]
-		}]
+// function initMap() {
+// 	var myLatlng = new google.maps.LatLng(33.791260,-118.136041); // <- Your latitude and longitude
+// 	var styles = [
+// 		{
+// 			"featureType": "water",
+// 			"stylers": [{
+// 				"color": "#d8dee9"
+// 			},
+// 			{
+// 				"visibility": "on"
+// 			}]
+// 		},
+// 		{
+// 			"featureType": "landscape",
+// 			"stylers": [{
+// 				"color": "#eeeeee"
+// 			}]
+// 		}]
 
-	var mapOptions = {
-		zoom: 14,
-		center: myLatlng,
-		mapTypeControl: false,
-		disableDefaultUI: true,
-		zoomControl: true,
-		scrollwheel: false,
-		styles: styles
-	}
+// 	var mapOptions = {
+// 		zoom: 14,
+// 		center: myLatlng,
+// 		mapTypeControl: false,
+// 		disableDefaultUI: true,
+// 		zoomControl: true,
+// 		scrollwheel: false,
+// 		styles: styles
+// 	}
 
-	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-	var marker = new google.maps.Marker({
-		position: myLatlng,
-		map: map,
-		title: 'We are here!'
-	});
-}
+// 	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+// 	var marker = new google.maps.Marker({
+// 		position: myLatlng,
+// 		map: map,
+// 		title: 'We are here!'
+// 	});
+// }
 
 function sendMessage() {
 	const userInput = document.getElementById('chat-input').value;

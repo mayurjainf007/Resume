@@ -147,7 +147,7 @@ const PERSONA_DATA = {
     }
     
     // Add persona switcher button
-    addPersonaSwitcher();
+    // addPersonaSwitcher();
 })();
 
 function showPersonaSelector() {

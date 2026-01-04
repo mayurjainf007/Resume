@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/template-dark/dark.css" />
     <link rel="stylesheet" href="bar/bar.css" />
     <link rel="stylesheet" href="css/persona.css" />
+    <link rel="stylesheet" href="css/ai.css" />
     <link rel="shortcut icon" href="images/favicons/favicon.ico">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3881TBDXN9"></script>
@@ -1024,6 +1025,70 @@
         </a>
       </div>
     </div>
+    <!-- AI Chat Assistant -->
+    <div id="ai-chat-container" class="ai-chat-container ai-chat-closed">
+        <button id="ai-chat-toggle" class="ai-chat-button" aria-label="Open AI Assistant">
+            <i class="fas fa-robot"></i>
+            <span class="pulse-ring"></span>
+        </button>
+        
+        <div id="ai-chat-window" class="ai-chat-window">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>Ask about Mayur</span>
+                </div>
+                <div class="ai-chat-controls">
+                    <button id="ai-chat-minimize" class="ai-chat-icon-btn" title="Minimize">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="ai-chat-close" class="ai-chat-icon-btn" title="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="ai-chat-messages" class="ai-chat-messages">
+                <div class="ai-message">
+                    <div class="ai-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-bubble">
+                        <p>👋 Hi! I'm Mayur's AI assistant powered by Google Gemini.</p>
+                        <p>I can help you learn about:</p>
+                        <ul>
+                            <li>💼 Work at Cigna, ZS Associates, TCS</li>
+                            <li>🛠️ Data Engineering & ML skills</li>
+                            <li>🚀 Projects & certifications</li>
+                            <li>📧 How to contact Mayur</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Try asking:</strong></p>
+                        <div class="suggestion-chips">
+                            <button class="chip" data-question="What's Mayur's experience with AWS?">AWS Experience</button>
+                            <button class="chip" data-question="Tell me about the RAG-ChatBot project">RAG-ChatBot</button>
+                            <button class="chip" data-question="What are Mayur's key skills?">Key Skills</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ai-chat-input-container">
+                <textarea 
+                    id="ai-chat-input" 
+                    placeholder="Ask me anything about Mayur..."
+                    rows="1"
+                    maxlength="500"
+                ></textarea>
+                <button id="ai-chat-send" class="ai-send-btn" title="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+            <div class="ai-chat-footer">
+                <small>Powered by <strong>Google Gemini</strong></small>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.validate.js"></script>
@@ -1034,6 +1099,7 @@
     <script src="js/owl.carousel.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/persona.js"></script>
+    <script src="js/ai.js"></script>
     <script src="https://kit.fontawesome.com/3ab0f3d512.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/8da76d029b.js"></script>
     <script src="js/scripts.js"></script>
