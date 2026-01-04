@@ -48,9 +48,9 @@ h6 {
 }
 
 .lnks:before {
-	/*background: -moz-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+	background: -moz-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
 	background: -webkit-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-	background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);*/
+	background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .lnk,
@@ -673,3 +673,10 @@ input[type="submit"]:hover {
     position: relative; /* Ensures the image stays on top */
     z-index: 2;
 }
+
+.content .title .first-word,
+	.content .title:first-letter,
+	.content-sidebar h2.widget-title .first-word,
+	.content-sidebar h2.widget-title:first-letter {
+		color: #000000!important;
+	}

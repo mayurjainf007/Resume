@@ -633,7 +633,7 @@ $(document).ready(function () {
 			// Show the sidebar
 			$('.top-menu').fadeIn(500, function () {
 				// Trigger the about-card after the main-card appears
-				$('.top-menu a[href="#about-card"]').trigger('click');
+				// $('.top-menu a[href="#about-card"]').trigger('click');
 				$('.card-inner').show()
 			});
 		});

@@ -104,7 +104,7 @@
 	.content .title:first-letter,
 	.content-sidebar h2.widget-title .first-word,
 	.content-sidebar h2.widget-title:first-letter {
-		color: #78cc6d!important;
+		color: #78cc6d;
 	}
 
 	.card-started .profile .image:before,     .content-sidebar .profile

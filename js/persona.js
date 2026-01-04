@@ -352,16 +352,22 @@ function updateIntroduction(persona) {
 
 }
 
-function addPersonaSwitcher() {
-    const switcher = document.createElement('button');
-    switcher.className = 'persona-switcher';
-    switcher.innerHTML = '🎛️ <span>Change View</span>';
-    switcher.onclick = resetPersona;
-    document.body.appendChild(switcher);
+function togglePersonaOverlay() {
+    const overlay = document.getElementById('personaOverlay');
+    overlay.classList.toggle('active');
+    overlay.onclick = resetPersona;
 }
 
+// function addPersonaSwitcher() {
+//     const switcher = document.createElement('button');
+//     switcher.className = 'persona-switcher';
+//     switcher.innerHTML = '🎛️ <span>Change View</span>';
+//     switcher.onclick = resetPersona;
+//     document.body.appendChild(switcher);
+// }
+
 function resetPersona() {
-    localStorage.removeItem('mayur_persona');
+    // localStorage.removeItem('mayur_persona');
     location.reload();
 }
 
