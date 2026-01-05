@@ -7,8 +7,17 @@ class GeminiChat {
     constructor() {
         // IMPORTANT: In production, move this to environment variable or backend
         // For now, we'll use direct API call (Option 3 - simplest)
-        this.API_KEY = 'AIzaSyCiL4GgfV9AIkNzj_hi2RL7-oX0hTyPQDI'; // Replace with your key
-        this.API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+        this.API_KEY = ${ secrets.GEMINI_API_KEY }; // Replace with your key
+        // this.API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent";
+        
+        this.models = [
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemma-3-27b-it:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemma-3-12b-it:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemma-3n-e4b-it:generateContent'
+        ];
+        this.currentModelIndex = 0;
         
         this.messages = [];
         this.isTyping = false;
@@ -95,7 +104,7 @@ class GeminiChat {
             this.addMessage(
                 "I apologize, but I'm having trouble connecting right now. " +
                 "Please try again in a moment or reach out to Mayur directly at " +
-                "mayurjain333@gmail.com or via LinkedIn.",
+                "mayurjain333@gmail.com.",
                 'ai'
             );
             this.trackEvent('error_occurred', error.message);
@@ -212,42 +221,71 @@ Now respond to the user's question concisely and helpfully.`;
 
         const fullPrompt = `${systemPrompt}\n\nConversation History:\n${context}\n\nUser: ${userMessage}\n\nAssistant:`;
 
+        const modelUrl = this.models[this.currentModelIndex];
         // Call Gemini API
-        const response = await fetch(`${this.API_URL}?key=${this.API_KEY}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: fullPrompt
-                    }]
-                }],
-                generationConfig: {
-                    temperature: 0.7,
-                    topK: 40,
-                    topP: 0.95,
-                    maxOutputTokens: 500,
-                }
-            })
-        });
+        try{
+            const response = await fetch(`${modelUrl}?key=${this.API_KEY}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    contents: [{
+                        parts: [{
+                            text: fullPrompt
+                        }]
+                    }],
+                    generationConfig: {
+                        temperature: 0.7,
+                        topK: 40,
+                        topP: 0.95,
+                        maxOutputTokens: 2048,
+                    }
+                })
+            });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(`API Error: ${errorData.error?.message || 'Unknown error'}`);
-        }
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(`API Error: ${errorData.error?.message || 'Unknown error'}`);
+            }
 
-        const data = await response.json();
-        const aiResponse = data.candidates[0].content.parts[0].text;
+            const data = await response.json();
+            console.log('Gemini API response:', data);
+
+            if (
+                data?.candidates?.[0]?.finishReason === 'MAX_TOKENS' ||
+                data?.error?.message?.includes('rate limit')
+            ) {
+                console.warn('Limit reached, switching model...');
+                this.switchModel();
+                return this.callGeminiAPI(userMessage);
+            }
+            // const aiResponse = data.candidates[0].content.parts[0].text;
+
+            const aiResponse = data?.candidates?.[0]?.content?.parts
+                ?.map(p => p.text || '')
+                .join(' ')
+                .trim() || 'No response received.';
+
 
         // Store in conversation history
-        this.conversationHistory.push(
-            { role: 'user', content: userMessage },
-            { role: 'assistant', content: aiResponse }
-        );
+            this.conversationHistory.push(
+                { role: 'user', content: userMessage },
+                { role: 'assistant', content: aiResponse }
+            );
 
-        return aiResponse;
+            return aiResponse;
+
+        } catch (err) {
+            console.error('Chat error:', err);
+            this.switchModel();
+            return this.callGeminiAPI(userMessage);
+        }
+    }
+
+    switchModel() {
+        this.currentModelIndex = (this.currentModelIndex + 1) % this.models.length;
+        console.log('Switched to model:', this.models[this.currentModelIndex]);
     }
 
     addMessage(text, sender) {
@@ -343,5 +381,5 @@ Now respond to the user's question concisely and helpfully.`;
 // Initialize chat when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     const geminiChat = new GeminiChat();
-    console.log('Gemini AI Chat initialized');
+    console.log('AI Chat initialized');
 });
