@@ -2,12 +2,13 @@
  * AI Chat Assistant with Google Gemini
  * Free Tier - No cost implementation
  */
+import './config.js';
 
 class GeminiChat {
     constructor() {
         // IMPORTANT: In production, move this to environment variable or backend
         // For now, we'll use direct API call (Option 3 - simplest)
-        this.API_KEY = ${ secrets.GEMINI_API_KEY }; // Replace with your key
+        this.API_KEY = window.GEMINI_API_KEY; // Replace with your key
         // this.API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent";
         
         this.models = [
