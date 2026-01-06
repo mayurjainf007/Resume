@@ -230,4 +230,5 @@ rgba(120, 204, 109, 0.5) 0%, rgba(120, 204, 109, 0.01) 100%);     }
 		background: -moz-linear-gradient(-45deg, #78cc6d);
 		background: -webkit-linear-gradient(-45deg, #78cc6d);
 		background: linear-gradient(135deg, #78cc6d);
+		display: none;
 	}

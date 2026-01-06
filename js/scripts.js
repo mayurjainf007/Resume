@@ -792,3 +792,44 @@ function sendMessage() {
 		document.getElementById('chat-response').innerText = 'Error: Unable to fetch response.';
 	});
 }
+
+
+
+function isMobileView() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+function scrollSpy() {
+  if (!isMobileView()) return;
+
+  const scrollTop = $(window).scrollTop();
+  let activeId = null;
+
+  $('.card-inner').each(function () {
+    const top = $(this).offset().top;
+    if (top <= scrollTop + 140) { // 140 = header offset; tweak if needed
+      activeId = $(this).attr('id');
+    }
+  });
+
+  if (activeId) {
+    $('.top-menu li').removeClass('active');
+    $(`.top-menu a[href="#${activeId}"]`).parent().addClass('active');
+  }
+}
+
+// run on load + scroll + resize
+$(document).ready(function () {
+  scrollSpy();
+  $(window).on('scroll', scrollSpy);
+  $(window).on('resize', scrollSpy);
+});
+
+$('.top-menu a').on('click', function (e) {
+  const target = $(this).attr('href'); // "#skills-card" etc.
+
+  if (isMobileView()) {
+    e.preventDefault();
+    document.querySelector(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});

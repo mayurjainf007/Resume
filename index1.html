@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="css/new-skin/classic-skin.css" />
     <link rel="stylesheet" href="css/demos/demo-colors.css" />
     <link rel="stylesheet" href="bar/bar.css" />
+    <link rel="stylesheet" href="css/persona.css" />
+    <link rel="stylesheet" href="css/ai.css" />
     <link rel="shortcut icon" href="images/favicons/favicon.ico">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3881TBDXN9"></script>
@@ -74,6 +76,31 @@
           <li></li>
         </ul>
       </div>
+      <!-- Persona Selection Overlay -->
+      <div class="persona-overlay" id="personaOverlay">
+          <div class="persona-header">
+              <small>Who are you?</small>
+              <h1>Choose your view</h1>
+          </div>
+          <div class="persona-grid">
+              <div class="persona-card" onclick="selectPersona('recruiter')">
+                  <div class="emoji">🧲</div>
+                  <div class="label">Hiring Recruiter</div>
+              </div>
+              <div class="persona-card" onclick="selectPersona('manager')">
+                  <div class="emoji">🛠️</div>
+                  <div class="label">Engineering Manager</div>
+              </div>
+              <div class="persona-card" onclick="selectPersona('lead')">
+                  <div class="emoji">🤝</div>
+                  <div class="label">Technical Lead</div>
+              </div>
+              <div class="persona-card" onclick="selectPersona('ceo_cfo')">
+                  <div class="emoji">📈</div>
+                  <div class="label">Business Stakeholders</div>
+              </div>
+          </div>
+      </div>
       <!-- Container -->
       <div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
         <header class="header">
@@ -86,8 +113,9 @@
             <div class="title">Mayur Jain</div>
             <div class="subtitle subtitle-typed">
               <div class="typing-title">
-                <p>DataOps Engineer</p>
-                <p>DevOps Engineer</p>
+                <p>Senior Data Engineer</p>
+                <p>Data Scientist Associate</p>
+                <p>Data Analytics Consultant</p>
               </div>
             </div>
           </div>
@@ -95,7 +123,7 @@
           <div class="top-menu">
             <ul>
               <li>
-                <a href="#about-card">
+                <a href="#about-card" id="about-link">
                   <span class="icon fas fa-user"></span>
                   <span class="link">About</span>
                 </a>
@@ -151,6 +179,9 @@
         </div>
         <div class="profile-card card-started" id="main-card">
           <div class="profile">
+            <div class="title">
+              <div id="profileCard-text"></div>
+            </div>
             <div class="slide" style="background-image: url(images/bg.jpg);"></div>
             <div class="image">
               <img src="images/profile_mj.jpg" />
@@ -158,9 +189,13 @@
             <div class="title">Mayur Jain</div>
             <div class="subtitle subtitle-typed">
               <div class="typing-title">
-                <p>DataOps Engineer</p>
-                <p>DevOps Engineer</p>
+                <p>Senior Data Engineer</p>
+                <p>Data Scientist Associate</p>
+                <p>Data Analytics Consultant</p>
               </div>
+            </div>
+            <div class="text">
+              <div>Building scalable data platforms and decision systems across Healthcare & Financial Services</div>
             </div>
             <div class="social-links social dark">
               <a target="_blank" href="https://www.linkedin.com/in/mayurjain007/">
@@ -179,13 +214,11 @@
                 <span class="fab fa-stack-overflow"></span>
               </a>
             </div>
-            <br />
-            <div class="text">
-              <div>Always keep good company because the people around you matter most!</div>
-            </div>
             <div class="lnks">
               <a target="_blank" href="pdf/Resume_mayur.pdf" class="download-btn">
                 <i class="fas fa-download"></i> Download CV </a>
+              <a href="#" class="download-btn" onclick="togglePersonaOverlay()">
+                <i class="fas fa-user"></i> Persona </a>
             </div>
           </div>
         </div>
@@ -196,12 +229,31 @@
               <div class="row">
                 <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
                   <div class="text-box">
-                    <p>
-                      <b>Innovative Data Engineer Driving Scalable, Insight-Driven Solutions</b>
-                      <br>
-                      <br>Results-oriented Data Engineer with over 5 years of experience designing and maintaining data systems that power business decisions. Known for developing scalable data pipelines, improving data reliability, and enabling faster access to insights through automation and streamlined workflows. <br> Experienced in building end-to-end solutions using Python and SQL for data transformation, analysis, and reporting. Skilled in working with PySpark on large datasets and deploying cloud-based data infrastructure on Azure. <br> Collaborates closely with cross-functional teams to align data initiatives with business needs, ensuring systems are efficient, secure, and ready for scale. <br>
-                      <br>
-                    </p>
+                    <p></p>
+                    <div class="about-right">
+                      <div class="metric-row">
+                        <div class="metric-card" id="metric1">
+                          <div class="metric-title"></div>
+                          <div class="metric-value"></div>
+                        </div>
+                        <div class="metric-card" id="metric2">
+                          <div class="metric-title"></div>
+                          <div class="metric-value"></div>
+                        </div>
+                        <div class="metric-card" id="metric3">
+                          <div class="metric-title"></div>
+                          <div class="metric-value"></div>
+                        </div>
+                      </div>
+                      <div class="metric-list">
+                        <div class="metric-list-title">What you'll care about</div>
+                        <ul>
+                          <li id="care1"></li>
+                          <li id="care2"></li>
+                          <li id="care3"></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="clear"></div>
@@ -296,23 +348,12 @@
                           <img src="images/clients/client_cigna1.png" alt="" />
                         </a>
                       </div>
-                      <ul>
-                        <li> - <b>Built a unified healthcare Data Lake on AWS (S3, Glue, Lambda, Redshift, EMR) to consolidate fragmented claims, EHR, and policy data, improving data availability for analytics teams by 60% and eliminating legacy ingestion jobs.</b></li>
-                        <br>
-                        <li> - <b>Developed predictive models in Python/PySpark to detect high-risk members, early chronic-condition indicators, and cost anomalies; integrated models into operational workflows via SageMaker endpoints with automated monitoring.</b></li>
-                        <br>
-                        <li> - <b>Implemented RAG pipelines using LLMs and vector search to extract insights from policy documents and clinical notes, reducing manual review time for care management teams by 55%.</b></li>
-                        <br>
-                        <li> - <b>Built and automated data quality frameworks for PHI/PII compliance (HIPAA) using PySpark SQL and CloudWatch, catching schema drift, duplicate claims, and data corruption before reaching downstream systems.</b></li>
-                        <br>
-                        <li> - <b>Created Power BI/Tableau dashboards visualizing utilization trends, fraud patterns, reimbursement cycles, and provider performance; enabled leadership to identify over $8M in avoidable spend annually.</b></li>
-                      <br>
-                      </ul>
+                    <ul></ul>
                     </div>
                   </div>
                   <!-- The ASI Group Experience -->
                   <div class="resume-items grid-item asi" style="display: none;">
-                    <div class="resume-item active">
+                    <div class="resume-item">
                       <div class="date">March 2024 – May 2025</div>
                       <div class="name">Data Engineer and Analytics Assistant</div>
                       <div class="company">Associated Student Inc.</div>
@@ -916,7 +957,7 @@
                   <div class="info-list">
                     <ul>
                       <li>
-                        <i class="fas fa-map-marker-alt"></i> : <a target="_blank" href="https://www.google.com/maps?q=40.31539903150282,-73.99588952140485"> Long Branch, NJ 07740 </a>
+                        <i class="fas fa-map-marker-alt"></i> : <a target="_blank" href="https://www.google.com/maps?q=40.31539903150282, -73.99588952140485"> Long Branch, NJ - 07740 </a>
                       </li>
                       <li>
                         <i class="fas fa-comment-dots"></i> : <a target="_blank" href="https://www.linkedin.com/messaging/compose/?recipient=mayurjain007"> Message via LinkedIn </a>
@@ -984,6 +1025,70 @@
         </a>
       </div>
     </div>
+    <!-- AI Chat Assistant -->
+    <div id="ai-chat-container" class="ai-chat-container ai-chat-closed">
+        <button id="ai-chat-toggle" class="ai-chat-button" aria-label="Open AI Assistant">
+            <i class="fas fa-robot"></i>
+            <span class="pulse-ring"></span>
+        </button>
+        
+        <div id="ai-chat-window" class="ai-chat-window">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>Ask about Mayur</span>
+                </div>
+                <div class="ai-chat-controls">
+                    <button id="ai-chat-minimize" class="ai-chat-icon-btn" title="Minimize">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="ai-chat-close" class="ai-chat-icon-btn" title="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="ai-chat-messages" class="ai-chat-messages">
+                <div class="ai-message">
+                    <div class="ai-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-bubble">
+                        <p>👋 Hi! I'm Mayur's AI assistant powered by Google Gemini.</p>
+                        <p>I can help you learn about:</p>
+                        <ul>
+                            <li>💼 Work at Cigna, ZS Associates, TCS</li>
+                            <li>🛠️ Data Engineering & ML skills</li>
+                            <li>🚀 Projects & certifications</li>
+                            <li>📧 How to contact Mayur</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Try asking:</strong></p>
+                        <div class="suggestion-chips">
+                            <button class="chip" data-question="What's Mayur's experience with AWS?">AWS Experience</button>
+                            <button class="chip" data-question="Tell me about the RAG-ChatBot project">RAG-ChatBot</button>
+                            <button class="chip" data-question="What are Mayur's key skills?">Key Skills</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ai-chat-input-container">
+                <textarea 
+                    id="ai-chat-input" 
+                    placeholder="Ask me anything about Mayur..."
+                    rows="1"
+                    maxlength="500"
+                ></textarea>
+                <button id="ai-chat-send" class="ai-send-btn" title="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+            <div class="ai-chat-footer">
+                <small>Powered by <strong>Mayur Jain</strong></small>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.validate.js"></script>
@@ -993,6 +1098,8 @@
     <script src="js/jquery.slimscroll.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/typed.js"></script>
+    <script src="js/persona.js"></script>
+    <script src="js/ai.js"></script>
     <script src="https://kit.fontawesome.com/3ab0f3d512.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/8da76d029b.js"></script>
     <script src="js/scripts.js"></script>
