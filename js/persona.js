@@ -283,42 +283,51 @@ function updateIntroduction(persona) {
     const titleElement = document.querySelector('#about-card .title');
     const textElement = document.querySelector('#about-card .text-box p');
     const profileElement = document.getElementById("profileCard-text");
-    
-    const aboutLink = document.getElementById("about-link"); // your About button
+
+    const aboutLink = document.getElementById("about-link");
     const profileText = document.getElementById("profileCard-text");
-    
+
     aboutLink.addEventListener("click", (e) => {
         e.preventDefault();
-
-        // void profileText.offsetWidth;
-        // Restart the animation cleanly
-        if (profileText.classList.contains("slide-out-right")) {
-            profileText.classList.remove("slide-out-right");
-            profileText.classList.add("slide-in-left");
-            setTimeout(() => {
+        
+        // Use setTimeout to check the state after the card animation completes
+        setTimeout(() => {
+            const aboutCard = document.getElementById('about-card');
+            
+            // Check if about-card is active or hidden
+            if (aboutCard && aboutCard.classList.contains('active')) {
+                // Card is ACTIVE - slide out the profile text
                 profileText.classList.remove("slide-in-left");
-            }, 600);
-        }
-        else{
-            profileText.classList.add("slide-out-right");
-        }
+                profileText.classList.add("slide-out-right");
+            } else if (aboutCard && aboutCard.classList.contains('hidden')) {
+                // Card is HIDDEN - slide in the profile text
+                profileText.classList.remove("slide-out-right");
+                profileText.classList.add("slide-in-left");
+                
+                // Clean up animation class after it finishes
+                setTimeout(() => {
+                    profileText.classList.remove("slide-in-left");
+                }, 600);
+            }
+        }, 100); // Small delay to let the card state update
     });
 
+    // Handle other menu links
     const otherLinks = document.querySelectorAll('.top-menu a:not(#about-link)');
     otherLinks.forEach(link => {
         link.addEventListener("click", () => {
-            // Only bring it back if it's currently slid out
+            // When other links are clicked, always bring profile text back
             if (profileText.classList.contains("slide-out-right")) {
                 profileText.classList.remove("slide-out-right");
                 profileText.classList.add("slide-in-left");
-                // Clean up the animation class after it finishes
+                
                 setTimeout(() => {
                     profileText.classList.remove("slide-in-left");
                 }, 600);
             }
         });
     });
-    
+
     if (profileElement) {
         profileElement.innerHTML = intro.title;
     }
@@ -326,7 +335,7 @@ function updateIntroduction(persona) {
     if (titleElement) {
         titleElement.textContent = intro.title;
     }
-    
+
     if (textElement) {
         textElement.innerHTML = intro.text;
     }
@@ -357,14 +366,6 @@ function togglePersonaOverlay() {
     overlay.classList.toggle('active');
     overlay.onclick = resetPersona;
 }
-
-// function addPersonaSwitcher() {
-//     const switcher = document.createElement('button');
-//     switcher.className = 'persona-switcher';
-//     switcher.innerHTML = '🎛️ <span>Change View</span>';
-//     switcher.onclick = resetPersona;
-//     document.body.appendChild(switcher);
-// }
 
 function resetPersona() {
     // localStorage.removeItem('mayur_persona');

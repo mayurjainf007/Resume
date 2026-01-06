@@ -703,8 +703,14 @@ input[type="file"] {
 		-webkit-border-radius: 0 0 4px 0;
 		-khtml-border-radius: 0 0 4px 0;
 	}
-	.header .top-menu ul {
-		background: #fff;
+	
+	::-webkit-scrollbar {
+		height: 6px;
+		background-color: transparent;
+	}
+
+	.profile .text {
+		display: none;
 	}
 }
 

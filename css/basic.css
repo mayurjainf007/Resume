@@ -435,7 +435,7 @@ strong {
 /* links, buttons */
 .lnks {
 	position: relative;
-	gap: 20px;
+	gap: 10px;
     top: 20px;
 }
 
@@ -1224,4 +1224,10 @@ canvas {
 
 .education{
 	text-align: justify;
+}
+
+@media (max-width: 1024px) {
+	body{
+		transform: scale (0.1);
+	}
 }
