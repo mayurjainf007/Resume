@@ -160,10 +160,3 @@ textarea:focus {
 		margin-top: 0;
 	}
 }
-
-.content .title .first-word,
-	.content .title:first-letter,
-	.content-sidebar h2.widget-title .first-word,
-	.content-sidebar h2.widget-title:first-letter {
-		color: #ffffff!important;
-	}

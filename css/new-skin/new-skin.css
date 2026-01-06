@@ -29,7 +29,7 @@ h5,
 h6 {
 	margin: 0 0 25px 0;
 	font-size: 30px;
-	color: #323232;
+	color: white;
 	line-height: 1.4em;
 	font-weight: 600;
 }
@@ -403,7 +403,7 @@ input[type="submit"] {
 	float: none;
 	width: 100%;
 	font-size: 14px;
-	color: #323232;
+	color: white;
 }
 
 .lnk:before,
@@ -1654,6 +1654,7 @@ input[type="file"] {
 
 .single-post-text p:last-child, .blog-content p:last-child {
 	margin-bottom: 0;
+	color: white;
 }
 
 blockquote {
@@ -2655,7 +2656,7 @@ a.next.page-numbers:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; 
+  color: black; 
   font-size: 24px;
   font-weight: bold;
   text-align: center;
