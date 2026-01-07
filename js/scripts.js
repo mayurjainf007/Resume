@@ -173,21 +173,11 @@ $(function () {
 			$('.card-inner').removeClass('fadeOut');
 			$('.card-inner').removeClass('fadeOutUp');
 			$('.card-inner').removeClass('animated');
-
-			$(window).on('scroll', function () {
-				var scrollPos = $(window).scrollTop();
-				$('.top-menu ul li a').each(function () {
-					var currLink = $(this);
-					var refElement = $(currLink.attr("href"));
-					if (refElement.offset().top - 76 <= scrollPos) {
-						$('.top-menu ul li').removeClass("active");
-						currLink.closest('li').addClass("active");
-					}
-				});
-			});
-
 			$('.card-inner .card-wrap').slimScroll({ destroy: true });
 			$('.card-inner .card-wrap').attr('style', '');
+			if ((width < 1024) & $('#home-card').length) {
+				bindActiveMenuOnWindowScroll();
+			}
 		}
 		else {
 			$($('.top-menu li.active a').attr('href')).addClass('active');
@@ -199,24 +189,55 @@ $(function () {
 		}
 	});
 
+	function bindActiveMenuOnWindowScroll() {
+	var OFFSET = 120; // tune: bigger = switches earlier
+	var $links = $('.top-menu ul li a');
 
-	/*
-		Smoothscroll
-	*/
+	function setActive() {
+		var scrollPos = $(window).scrollTop() + OFFSET;
+		var winBottom = scrollPos + $(window).height();
 
-	if ((width < 1024) & $('#home-card').length) {
-		$(window).on('scroll', function () {
-			var scrollPos = $(window).scrollTop();
-			$('.top-menu ul li a').each(function () {
-				var currLink = $(this);
-				var refElement = $(currLink.attr("href"));
-				if (refElement.offset().top - 76 <= scrollPos) {
-					$('.top-menu ul li').removeClass("active");
-					currLink.closest('li').addClass("active");
-				}
-			});
+		var bestLink = null;
+		var bestTop = -Infinity;
+
+		$links.each(function () {
+		var $a = $(this);
+		var href = $a.attr('href');
+
+		if (!href || href.charAt(0) !== '#') return;
+
+		var $sec = $(href);
+		if (!$sec.length || !$sec.is(':visible')) return;
+
+		var top = $sec.offset().top;
+		var bottom = top + $sec.outerHeight();
+
+		// section is “current” if scrollPos is inside it
+		if (scrollPos >= top && scrollPos < bottom) {
+			bestLink = $a;
+			return false; // break
+		}
+
+		// fallback: pick the closest section above scrollPos
+		if (top <= scrollPos && top > bestTop) {
+			bestTop = top;
+			bestLink = $a;
+		}
 		});
+
+		if (bestLink) {
+		$('.top-menu ul li').removeClass('active');
+		bestLink.closest('li').addClass('active');
+		}
 	}
+
+	// prevent multiple bindings (you were binding twice)
+	$(window).off('scroll.activeMenu');
+	$(window).on('scroll.activeMenu', setActive);
+
+	setActive(); // run once on load
+	}
+
 
 
 	/*
@@ -732,68 +753,22 @@ $(document).ready(function () {
 });
 
 
-/*
-	Google Map Options
-*/
+(function () {
+    emailjs.init("ttDC08gPdb4xm_ZeK");
+  })();
 
-// function initMap() {
-// 	var myLatlng = new google.maps.LatLng(33.791260,-118.136041); // <- Your latitude and longitude
-// 	var styles = [
-// 		{
-// 			"featureType": "water",
-// 			"stylers": [{
-// 				"color": "#d8dee9"
-// 			},
-// 			{
-// 				"visibility": "on"
-// 			}]
-// 		},
-// 		{
-// 			"featureType": "landscape",
-// 			"stylers": [{
-// 				"color": "#eeeeee"
-// 			}]
-// 		}]
-
-// 	var mapOptions = {
-// 		zoom: 14,
-// 		center: myLatlng,
-// 		mapTypeControl: false,
-// 		disableDefaultUI: true,
-// 		zoomControl: true,
-// 		scrollwheel: false,
-// 		styles: styles
-// 	}
-
-// 	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-// 	var marker = new google.maps.Marker({
-// 		position: myLatlng,
-// 		map: map,
-// 		title: 'We are here!'
-// 	});
-// }
-
-function sendMessage() {
-	const userInput = document.getElementById('chat-input').value;
-	fetch('https://api.openai.com/v1/completions', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-			'Authorization': 'Bearer YOUR_OPENAI_API_KEY'
-		},
-		body: JSON.stringify({
-			model: 'text-davinci-003',
-			prompt: userInput,
-			max_tokens: 100
-		})
-	}).then(response => response.json()).then(data => {
-		document.getElementById('chat-response').innerText = data.choices[0].text;
-	}).catch(error => {
-		document.getElementById('chat-response').innerText = 'Error: Unable to fetch response.';
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+	e.preventDefault();
+	emailjs.sendForm(
+		"service_ncn9jsj",
+		"template_13z7zfd",
+		this
+	).then(() => {
+		alert("Email sent successfully!");
+	}).catch(() => {
+		alert("Failed to send email.");
 	});
-}
-
-
+});
 
 function isMobileView() {
   return window.matchMedia("(max-width: 768px)").matches;

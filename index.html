@@ -34,20 +34,6 @@
     <link rel="stylesheet" href="css/persona.css" />
     <link rel="stylesheet" href="css/ai.css" />
     <link rel="shortcut icon" href="images/favicons/favicon.ico">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3881TBDXN9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-3881TBDXN9');
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="page new-skin">
@@ -980,42 +966,12 @@
               </div>
             </div>
             <div class="content contacts">
-              <div class="title">Contact Form</div>
-              <div class="row">
-                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                  <div class="contact_form">
-                    <form id="cform" method="post">
-                      <div class="row">
-                        <div class="col col-d-6 col-t-6 col-m-12">
-                          <div class="group-val">
-                            <input type="text" name="name" placeholder="Full Name" />
-                          </div>
-                        </div>
-                        <div class="col col-d-6 col-t-6 col-m-12">
-                          <div class="group-val">
-                            <input type="text" name="email" placeholder="Email Address" />
-                          </div>
-                        </div>
-                        <div class="col col-d-12 col-t-12 col-m-12">
-                          <div class="group-val">
-                            <textarea name="message" placeholder="Your Message"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="align-left">
-                        <a href="#" class="button" onclick="$('#cform').submit(); return false;">
-                          <span class="text">Send Message</span>
-                          <span class="arrow"></span>
-                        </a>
-                      </div>
-                    </form>
-                    <div class="alert-success">
-                      <p>Thanks, your message is sent successfully.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="clear"></div>
-              </div>
+              <form id="contact-form">
+                <input type="text" name="from_name" placeholder="Your name" required />
+                <input type="email" name="reply_to" placeholder="Your email" required />
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
             </div>
           </div>
         </div>
@@ -1091,7 +1047,18 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3881TBDXN9"></script>
+    <script>
+      if (typeof window.jQuery === "undefined") {
+        document.write('<script src="js/jquery.min.js"><\/script>');
+      }
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-3881TBDXN9');
+	  </script>
     <script src="js/jquery.validate.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/imagesloaded.pkgd.js"></script>
@@ -1101,8 +1068,9 @@
     <script src="js/typed.js"></script>
     <script src="js/persona.js"></script>
     <script src="js/ai.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/3ab0f3d512.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/8da76d029b.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   </body>
 </html>
